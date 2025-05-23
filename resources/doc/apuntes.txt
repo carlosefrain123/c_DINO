@@ -1,0 +1,15 @@
+1. Primero se crea las migraciones:
+php artisan make:migration create_categories_table
+php artisan make:migration create_tags_table
+php artisan make:migration create_posts_table
+php artisan make:migration create_post_categories_table
+php artisan make:migration create_post_tags_table
+php artisan make:migration create_media_table
+php artisan make:migration create_brands_table
+php artisan make:migration create_products_table
+php artisan make:migration create_orders_table
+php artisan make:migration create_order_items_table
+php artisan make:migration create_payments_table
+php artisan make:migration create_wishlists_table
+php artisan make:migration create_reviews_table
+php artisan make:migration create_shipping_addresses_table
