@@ -25,3 +25,11 @@ php artisan make:model PostTag
 php artisan make:model PostCategory
 php artisan make:model Media
 
+4. Se agrega los controladores
+php artisan make:controller UserController
+php artisan make:controller PostController
+php artisan make:controller CategoryController
+php artisan make:controller TagController
+php artisan make:controller PostTagController
+php artisan make:controller PostCategoryController
+php artisan make:controller MediaController
