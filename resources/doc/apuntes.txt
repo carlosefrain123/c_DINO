@@ -39,3 +39,8 @@ php artisan make:factory PostFactory
 php artisan make:factory CategoryFactory
 php artisan make:factory TagFactory
 php artisan make:factory MediaFactory
+
+6. Para ejecutar los seed
+php artisan migrate --seed
+Y luego
+php artisan migrate:fresh --seed
