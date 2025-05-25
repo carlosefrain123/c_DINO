@@ -44,3 +44,7 @@ php artisan make:factory MediaFactory
 php artisan migrate --seed
 Y luego
 php artisan migrate:fresh --seed
+
+7. Instalar laravel breeze:
+composer require laravel/breeze --dev
+php artisan breeze:install > blade > yes > enter
