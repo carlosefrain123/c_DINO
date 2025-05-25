@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Limpio Be</title>
+    <title>DINO S.R.L</title>
     @include('partials.head')
 </head>
 

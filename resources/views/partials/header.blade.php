@@ -1,12 +1,13 @@
 <header class="header-2">
+    <!-- Notificación superior -->
     <div class="header-notification theme-bg-color overflow-hidden py-2">
         <div class="notification-slider">
             <div>
                 <div class="timer-notification text-center">
                     <h6>
-                        <strong class="me-1">¡Bienvenido a AnderCode!</strong>
-                        Disfruta de nuevas ofertas y regalos todos los días en los fines de semana.
-                        <strong class="ms-1">Muchas por Comprar</strong>
+                        <strong class="me-1">¡Bienvenido a DINO!</strong>
+                        Disfruta de nuevas ofertas y regalos todos los días durante los fines de semana.
+                        <strong class="ms-1">¡Mucho por descubrir!</strong>
                     </h6>
                 </div>
             </div>
@@ -14,8 +15,8 @@
             <div>
                 <div class="timer-notification text-center">
                     <h6>
-                        ¡Algo que te encanta ahora está en oferta!
-                        <a href="{{ url('shop-left-sidebar') }}" class="text-white">¡Compra Ahora!</a>
+                        ¡Algo que te encanta ahora está en promoción!
+                        <a href="{{ url('shop-left-sidebar') }}" class="text-white">¡Compra ahora!</a>
                     </h6>
                 </div>
             </div>
@@ -27,39 +28,46 @@
         </button>
     </div>
 
+    <!-- Barra de navegación superior -->
     <div class="top-nav top-header sticky-header sticky-header-3">
         <div class="container-fluid-lg">
             <div class="row">
                 <div class="col-12">
                     <div class="navbar-top">
+
+                        <!-- Botón hamburguesa para menú en móviles -->
                         <button class="navbar-toggler d-xl-none d-block p-0 me-3" type="button"
                             data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
                             <span class="navbar-toggler-icon">
                                 <i class="iconly-Category icli theme-color"></i>
                             </span>
                         </button>
+
+                        <!-- Logo -->
                         <a href="#" class="web-logo nav-logo">
-                            <img src="{{ asset('assets/images/logo/3.png') }}" class="img-fluid blur-up lazyload"
-                                alt="" style="width: 75px;">
+                            <img src="{{ asset('assets/images/logo/logodino2.png') }}"
+                                class="img-fluid blur-up lazyload" alt="Logo DINO" style="width: 75px;">
                         </a>
 
+                        <!-- Buscador flotante -->
                         <div class="search-full">
                             <div class="input-group">
                                 <span class="input-group-text">
                                     <i data-feather="search" class="font-light"></i>
                                 </span>
-                                <input type="text" class="form-control search-type" placeholder="Search here..">
+                                <input type="text" class="form-control search-type" placeholder="Buscar aquí...">
                                 <span class="input-group-text close-search">
                                     <i data-feather="x" class="font-light"></i>
                                 </span>
                             </div>
                         </div>
 
+                        <!-- Buscador en escritorio -->
                         <div class="middle-box">
                             <div class="center-box">
                                 <div class="searchbar-box order-xl-1 d-none d-xl-block">
                                     <input type="search" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="search for product, delivered to your door...">
+                                        placeholder="Busca productos y recíbelos en tu puerta...">
                                     <button class="btn search-button">
                                         <i class="iconly-Search icli"></i>
                                     </button>
@@ -67,23 +75,25 @@
                             </div>
                         </div>
 
+                        <!-- Menú derecho -->
                         <div class="rightside-menu">
-
                             <div class="option-list">
                                 <ul>
+                                    <!-- Ícono perfil -->
                                     <li>
                                         <a href="javascript:void(0)" class="header-icon user-icon search-icon">
                                             <i class="iconly-Profile icli"></i>
                                         </a>
                                     </li>
 
+                                    <!-- Ícono búsqueda -->
                                     <li>
                                         <a href="javascript:void(0)" class="header-icon search-box search-icon">
                                             <i class="iconly-Search icli"></i>
                                         </a>
                                     </li>
 
-
+                                    <!-- Favoritos -->
                                     <li class="onhover-dropdown">
                                         <a href="#" class="header-icon swap-icon">
                                             <small id="wishlist-count" class="badge-number">0</small>
@@ -91,6 +101,7 @@
                                         </a>
                                     </li>
 
+                                    <!-- Carrito -->
                                     <li class="onhover-dropdown">
                                         <a href="#" class="header-icon bag-icon">
                                             <small id="cart-count-uno" class="badge-number">0</small>
@@ -98,32 +109,33 @@
                                         </a>
                                         <div class="onhover-div">
                                             <ul class="cart-list" id="cart-dropdown">
-                                                <!-- Los productos del carrito se insertarán aquí dinámicamente -->
+                                                <!-- Productos del carrito se insertan dinámicamente -->
                                             </ul>
 
                                             <div class="price-box">
-                                                <h5>Total :</h5>
-                                                <small>+Envio</small>
+                                                <h5>Total:</h5>
+                                                <small>+ Envío</small>
                                                 <h4 class="theme-color fw-bold" id="cart-dropdown-total">$ 0.00</h4>
                                             </div>
 
                                             <div class="button-group">
-                                                <a href="#" class="btn btn-sm cart-button">Ver
-                                                    Carrito</a>
+                                                <a href="#" class="btn btn-sm cart-button">Ver Carrito</a>
                                                 <a href="checkout.html"
-                                                    class="btn btn-sm cart-button theme-bg-color
-                                                text-white">Proceder
-                                                    al Pago</a>
+                                                    class="btn btn-sm cart-button theme-bg-color text-white">
+                                                    Proceder al Pago
+                                                </a>
                                             </div>
                                         </div>
                                     </li>
 
+                                    <!-- Perfil/Usuario -->
                                     <li class="onhover-dropdown">
                                         <a href="javascript:void(0)" class="header-icon swap-icon">
                                             <i class="iconly-Profile icli"></i>
                                         </a>
                                     </li>
 
+                                    <!-- Sesión del usuario -->
                                     <li class="right-side onhover-dropdown">
                                         <div class="delivery-login-box">
                                             <div class="delivery-detail">
@@ -135,7 +147,7 @@
                                         <div class="onhover-div onhover-div-login">
                                             <ul class="user-box-name">
                                                 @auth
-                                                    <!-- Si el usuario está autenticado -->
+                                                    <!-- Usuario autenticado -->
                                                     <li class="product-box-contain">
                                                         <a href="#">Mi Perfil</a>
                                                     </li>
@@ -152,7 +164,7 @@
                                                         </form>
                                                     </li>
                                                 @else
-                                                    <!-- Si el usuario no está autenticado -->
+                                                    <!-- Usuario no autenticado -->
                                                     <li class="product-box-contain">
                                                         <a href="{{ route('login') }}">Iniciar Sesión</a>
                                                     </li>
@@ -163,12 +175,12 @@
                                                 @endauth
                                             </ul>
                                         </div>
-
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
+                        </div> <!-- /.rightside-menu -->
+
+                    </div> <!-- /.navbar-top -->
                 </div>
             </div>
         </div>

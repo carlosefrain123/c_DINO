@@ -4,7 +4,7 @@
 }
 
 .theme-color-2 {
-    --theme-color: #0baf9a;
+    --theme-color: #ffd60a;
     --theme-color-rgb: 11, 175, 154
 }
 
@@ -27131,7 +27131,7 @@ header.header-gradient .top-nav .navbar-top .rightside-box .right-side-menu .rig
 }
 
 .bg-effect {
-    background-image: url("../images/bg-body.png");
+    background-image: url("#");
     background-repeat: no-repeat;
     background-position: center
 }
