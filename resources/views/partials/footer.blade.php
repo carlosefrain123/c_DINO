@@ -59,7 +59,7 @@
             <div class="row g-md-4 gy-sm-5 gy-2">
                 <!-- Logo y redes -->
                 <div class="col-xxl-3 col-xl-4 col-sm-6">
-                    <a href="#" class="foot-logo">
+                    <a href="{{route('home')}}" class="foot-logo">
                         <img src="{{ asset('assets/images/logo/logodino2.png') }}" class="img-fluid" alt="Logo DINO S.R.L."
                             style="width: 75px;">
                     </a>

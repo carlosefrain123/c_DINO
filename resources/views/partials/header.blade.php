@@ -44,7 +44,7 @@
                         </button>
 
                         <!-- Logo -->
-                        <a href="#" class="web-logo nav-logo">
+                        <a href="{{route('home')}}" class="web-logo nav-logo">
                             <img src="{{ asset('assets/images/logo/logodino2.png') }}"
                                 class="img-fluid blur-up lazyload" alt="Logo DINO" style="width: 75px;">
                         </a>
