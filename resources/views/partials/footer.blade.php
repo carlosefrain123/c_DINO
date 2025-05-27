@@ -1,207 +1,138 @@
 <footer class="section-t-space footer-section-2">
     <div class="container-fluid-lg">
+
+        <!-- Sección de servicios destacados -->
+        <div class="service-section">
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="service-contain">
+                        <!-- Producto siempre fresco -->
+                        <div class="service-box">
+                            <div class="service-image">
+                                <img src="{{ asset('assets/svg/product.svg') }}" class="blur-up lazyload"
+                                    alt="Productos frescos">
+                            </div>
+                            <div class="service-detail">
+                                <h5>Productos Siempre Frescos</h5>
+                            </div>
+                        </div>
+
+                        <!-- Envío gratuito -->
+                        <div class="service-box">
+                            <div class="service-image">
+                                <img src="{{ asset('assets/svg/delivery.svg') }}" class="blur-up lazyload"
+                                    alt="Envío gratis">
+                            </div>
+                            <div class="service-detail">
+                                <h5>Envío Gratis en Compras Mayores a S/ 200</h5>
+                            </div>
+                        </div>
+
+                        <!-- Descuentos diarios -->
+                        <div class="service-box">
+                            <div class="service-image">
+                                <img src="{{ asset('assets/svg/discount.svg') }}" class="blur-up lazyload"
+                                    alt="Descuentos diarios">
+                            </div>
+                            <div class="service-detail">
+                                <h5>Descuentos Especiales Todos los Días</h5>
+                            </div>
+                        </div>
+
+                        <!-- Mejor precio del mercado -->
+                        <div class="service-box">
+                            <div class="service-image">
+                                <img src="{{ asset('assets/svg/market.svg') }}" class="blur-up lazyload"
+                                    alt="Mejor precio">
+                            </div>
+                            <div class="service-detail">
+                                <h5>El Mejor Precio del Mercado</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Información principal del footer -->
         <div class="main-footer">
             <div class="row g-md-4 gy-sm-5 gy-2">
+                <!-- Logo y redes -->
                 <div class="col-xxl-3 col-xl-4 col-sm-6">
-                    <a href="index.html" class="foot-logo">
-                        <img src="../assets/images/logo/3.png" class="img-fluid" alt="">
+                    <a href="#" class="foot-logo">
+                        <img src="{{ asset('assets/images/logo/logodino2.png') }}" class="img-fluid" alt="Logo DINO S.R.L."
+                            style="width: 75px;">
                     </a>
-                    <p class="information-text">it is a long established fact that a reader will be distracted
-                        by the readable content.</p>
+                    <p class="information-text">
+                        DINO S.R.L es una empresa filial del grupo <strong>Cementos Pacasmayo</strong>, dedicada a la
+                        comercialización y distribución de productos especializados para la construcción y servicios
+                        asociados. </p>
                     <ul class="social-icon">
-                        <li>
-                            <a href="www.facebook.com">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
+                        <li><a href="https://www.facebook.com/dinosrl" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a></li>
+                        <li><a href="https://www.twitter.com/dinosrl" target="_blank"><i class="fab fa-twitter"></i></a>
                         </li>
-                        <li>
-                            <a href="www.goolge.com">
-                                <i class="fab fa-google"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="www.twitter.com">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="www.instagram.com">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="www.pinterest.com">
-                                <i class="fab fa-pinterest-p"></i>
-                            </a>
-                        </li>
+                        <li><a href="https://www.instagram.com/dinosrl" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.pinterest.com/dinosrl" target="_blank"><i
+                                    class="fab fa-pinterest-p"></i></a></li>
                     </ul>
-
-                    <div class="social-app mt-sm-4 mt-3 mb-4">
-                        <ul>
-                            <li>
-                                <a href="https://play.google.com/store/apps" target="_blank">
-                                    <img src="../assets/images/playstore.svg" class="blur-up lazyload" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.apple.com/in/app-store/" target="_blank">
-                                    <img src="../assets/images/appstore.svg" class="blur-up lazyload" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
 
+                <!-- Puedes añadir enlaces útiles aquí -->
                 <div class="col-xxl-2 col-xl-4 col-sm-6">
                     <div class="footer-title">
-                        <h4>About Fastkart</h4>
+                        <h4>Enlaces Útiles</h4>
                     </div>
-                    <ul class="footer-list footer-contact mb-sm-0 mb-3">
-                        <li>
-                            <a href="about-us.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>About Us</a>
-                        </li>
-                        <li>
-                            <a href="contact-us.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="term_condition.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Terms & Coditions</a>
-                        </li>
-                        <li>
-                            <a href="careers.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Careers</a>
-                        </li>
-                        <li>
-                            <a href="blog-list.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Latest Blog</a>
-                        </li>
+                    <ul class="footer-list">
+                        <li><a href="#">Tienda</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
 
-                <div class="col-xxl-2 col-xl-4 col-sm-6">
-                    <div class="footer-title">
-                        <h4>Useful Link</h4>
-                    </div>
-                    <ul class="footer-list footer-contact mb-sm-0 mb-3">
-                        <li>
-                            <a href="order-success.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Your Order</a>
-                        </li>
-                        <li>
-                            <a href="user-dashboard.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Your Account</a>
-                        </li>
-                        <li>
-                            <a href="order-tracking.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Track Orders</a>
-                        </li>
-                        <li>
-                            <a href="wishlist.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Your Wishlist</a>
-                        </li>
-                        <li>
-                            <a href="faq.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>FAQs</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-xxl-2 col-xl-4 col-sm-6">
-                    <div class="footer-title">
-                        <h4>Categories</h4>
-                    </div>
-                    <ul class="footer-list footer-contact mb-sm-0 mb-3">
-                        <li>
-                            <a href="vegetables-demo.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Fresh Vegetables</a>
-                        </li>
-                        <li>
-                            <a href="spice-demo.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Hot Spice</a>
-                        </li>
-                        <li>
-                            <a href="bags-demo.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>Brand New Bags</a>
-                        </li>
-                        <li>
-                            <a href="bakery-demo.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>New Bakery</a>
-                        </li>
-                        <li>
-                            <a href="grocery-demo.html" class="footer-contain-2">
-                                <i class="fas fa-angle-right"></i>New Grocery</a>
-                        </li>
-                    </ul>
-                </div>
-
+                <!-- Otra sección informativa -->
                 <div class="col-xxl-3 col-xl-4 col-sm-6">
                     <div class="footer-title">
-                        <h4>Store infomation</h4>
+                        <h4>Información de la Tienda</h4>
                     </div>
                     <ul class="footer-address footer-contact">
                         <li>
-                            <a href="javascript:void(0)">
-                                <div class="inform-box flex-start-box">
-                                    <i data-feather="map-pin"></i>
-                                    <p>Fastkart Demo Store, Demo store india 345 - 659</p>
-                                </div>
-                            </a>
+                            <div class="inform-box">
+                                <i data-feather="phone"></i>
+                                <p>Llámanos: +51 987 654 321</p>
+                            </div>
                         </li>
-
                         <li>
-                            <a href="javascript:void(0)">
-                                <div class="inform-box">
-                                    <i data-feather="phone"></i>
-                                    <p>Call us: 123-456-7890</p>
-                                </div>
-                            </a>
+                            <div class="inform-box">
+                                <i data-feather="mail"></i>
+                                <p>Email: soporte@dinosrl.com</p>
+                            </div>
                         </li>
-
                         <li>
-                            <a href="javascript:void(0)">
-                                <div class="inform-box">
-                                    <i data-feather="mail"></i>
-                                    <p>Email Us: Support@Fastkart.com</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <div class="inform-box">
-                                    <i data-feather="printer"></i>
-                                    <p>Fax: 123456</p>
-                                </div>
-                            </a>
+                            <div class="inform-box">
+                                <i data-feather="map-pin"></i>
+                                <p>Lambayeque, Perú</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
+        <!-- Subfooter -->
         <div class="sub-footer section-small-space">
             <div class="left-footer">
-                <p>2022 Copyright By Themeforest Powered By Pixelstrap</p>
+                <p>&copy; 2025 DINO S.R.L. | Desarrollado por AnderCode</p>
             </div>
             <div class="right-footer">
                 <ul class="payment-box">
-                    <li>
-                        <img src="../assets/images/icon/paymant/visa.png" alt="">
-                    </li>
-                    <li>
-                        <img src="../assets/images/icon/paymant/discover.png" alt="">
-                    </li>
-                    <li>
-                        <img src="../assets/images/icon/paymant/american.png" alt="">
-                    </li>
-                    <li>
-                        <img src="../assets/images/icon/paymant/master-card.png" alt="">
-                    </li>
-                    <li>
-                        <img src="../assets/images/icon/paymant/giro-pay.png" alt="">
-                    </li>
+                    <li><img src="{{ asset('assets/images/icon/paymant/visa.png') }}" alt="Visa"></li>
+                    <li><img src="{{ asset('assets/images/icon/paymant/mastercard.png') }}" alt="MasterCard"></li>
+                    <li><img src="{{ asset('assets/images/icon/paymant/yape.png') }}" alt="Yape"></li>
+                    <li><img src="{{ asset('assets/images/icon/paymant/plin.png') }}" alt="Plin"></li>
                 </ul>
             </div>
         </div>
