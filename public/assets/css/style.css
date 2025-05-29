@@ -47069,3 +47069,9 @@ body.rtl .theme-product-section .right-box-contain .license-list .accordion-item
 }
 
 /*# sourceMappingURL=style.css.map */
+#servicios-dino h5 {
+  font-size: 1.1rem;
+}
+#servicios-dino p {
+  font-size: 0.95rem;
+}
