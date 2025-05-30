@@ -1,5 +1,5 @@
 <!-- Sección de Servicios -->
-<section id="servicios-dino" class="ts-service-area py-5">
+<section id="services" class="ts-service-area py-5 servicios-dino">
     <div class="container">
         <!-- Título -->
         <div class="row text-center mb-4">
@@ -73,8 +73,7 @@
                     <!-- Servicio 4 -->
                     <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img me-3">
-                            <img src="../assets/images/services_icon/rapimix.png" alt="Rapimix"
-                                style="width: 60px;">
+                            <img src="../assets/images/services_icon/rapimix.png" alt="Rapimix" style="width: 60px;">
                         </div>
                         <div class="ts-service-box-info">
                             <h5 class="service-box-title"><b>Rapimix</b></h5>
@@ -88,8 +87,7 @@
                     <!-- Servicio 5 -->
                     <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img me-3">
-                            <img src="../assets/images/services_icon/bovedilla.png" alt="Viguetas"
-                                style="width: 60px;">
+                            <img src="../assets/images/services_icon/bovedilla.png" alt="Viguetas" style="width: 60px;">
                         </div>
                         <div class="ts-service-box-info">
                             <h5 class="service-box-title"><b>Viguetas y Bovedillas</b></h5>

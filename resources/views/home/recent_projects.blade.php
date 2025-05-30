@@ -1,5 +1,5 @@
 <!-- Blog Section Start -->
-<section class="section-b-space">
+<section class="section-b-space" id="recent_projects">
     <div class="container-fluid-lg">
         <div class="seller-title mb-5 text-center">
             <h2 class="fw-bold" style="color: #ffd60a">Proyectos Recientes</h2>

@@ -1,5 +1,5 @@
 <!-- Sección de Preguntas Frecuentes (FAQ) - Institucional -->
-<section class="faq-box-contain section-b-space">
+<section class="faq-box-contain section-b-space" id="faq">
     <div class="container">
         <div class="row">
             <div class="col-xl-5">

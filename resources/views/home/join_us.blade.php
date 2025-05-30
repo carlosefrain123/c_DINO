@@ -1,5 +1,5 @@
 <!-- Service Section Start -->
-<section class="become-service section-b-space">
+<section class="become-service section-b-space" id="join_us">
     <div class="container-fluid-lg">
         <div class="seller-title mb-5">
             <h2 class="text-center" style="color: #ffd60a">¿Por qué elegir a DINO S.R.L.?</h2>

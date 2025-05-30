@@ -9,16 +9,16 @@
     <!-- Home Section End -->
 
     <!-- Category Section Start -->
-    @include('home.about_us')
+    @include('home.faq')
     <!-- Category Section End -->
+
+    <!-- Banner Section Start -->
+    @include('home.values')
+    <!-- Banner Section End -->
 
     <!-- Value Section Start -->
     @include('home.join_us')
     <!-- Value Section End -->
-    
-    <!-- Banner Section Start -->
-    @include('home.values')
-    <!-- Banner Section End -->
 
     <!-- Product Section Start -->
     @include('home.services')

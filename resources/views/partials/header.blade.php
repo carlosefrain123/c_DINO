@@ -324,12 +324,33 @@
                                 <ul class="navbar-nav">
                                     <li class="nav-item dropdown dropdown-mega">
                                         <a class="nav-link dropdown-toggle ps-xl-2 ps-0" href="javascript:void(0)"
-                                            data-bs-toggle="dropdown">Home</a>
+                                            data-bs-toggle="dropdown">Inicio</a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="index.html">Kartshop</a>
+                                                <a class="dropdown-item" href="{{ route('home') }}#faq">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="{{ route('home') }}#values">Quiénes
+                                                    Somos</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('home') }}#join_us">Elíjenos</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('home') }}#services">Servicios</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('home') }}#why_choose_us">Únete</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('home') }}#recent_projects">Proyectos</a>
                                             </li>
                                         </ul>
+
                                     </li>
 
                                     <li class="nav-item dropdown">

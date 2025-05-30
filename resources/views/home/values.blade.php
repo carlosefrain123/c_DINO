@@ -1,5 +1,5 @@
 <!-- Inicio de la Sección Institucional -->
-<section class="business-section section-b-space">
+<section class="business-section section-b-space" id="values">
     <div class="container-fluid-lg">
         <div class="seller-title mb-5 text-center">
             <h2 class="fw-bold" style="color: #ffd60a">Nuestra Identidad Empresarial</h2>
@@ -27,7 +27,7 @@
             <!-- Cultura Organizacional -->
             <div class="col-xxl-4 col-md-12 mb-4" >
                 <div class="business-box text-center p-4 shadow rounded-3 h-100" style="background-color: #ffffff">
-                    <img src="../assets/images/values/cultura.png" class="img-fluid mb-3" alt="Cultura Organizacional" style="max-height: 80px;">
+                    <img src="../assets/images/values/cultura2.png" class="img-fluid mb-3" alt="Cultura Organizacional" style="max-height: 80px;">
                     <h4 class="fw-semibold"><b>Cultura Organizacional</b></h4>
                     <p class="text-muted mb-0">Nuestra cultura se basa en principios que nos impulsan día a día:<br>
                         • Las personas primero<br>
