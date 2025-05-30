@@ -359,8 +359,8 @@
 
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="shop-category-slider.html">Shop
-                                                    Category Slider</a>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('company.about') }}">Compañi</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item" href="shop-category.html">Shop
