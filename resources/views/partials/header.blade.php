@@ -44,7 +44,7 @@
                         </button>
 
                         <!-- Logo -->
-                        <a href="{{route('home')}}" class="web-logo nav-logo">
+                        <a href="{{ route('home') }}" class="web-logo nav-logo">
                             <img src="{{ asset('assets/images/logo/logodino2.png') }}"
                                 class="img-fluid blur-up lazyload" alt="Logo DINO" style="width: 75px;">
                         </a>
@@ -181,6 +181,239 @@
                         </div> <!-- /.rightside-menu -->
 
                     </div> <!-- /.navbar-top -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid-lg">
+        <div class="row">
+            <div class="col-12">
+                <div class="main-nav">
+                    <div class="header-nav-left">
+                        <button class="dropdown-category dropdown-category-2">
+                            <i class="iconly-Category icli"></i>
+                            <span>All Categories</span>
+                        </button>
+
+                        <div class="category-dropdown">
+                            <div class="category-title">
+                                <h5>Categories</h5>
+                                <button type="button" class="btn p-0 close-button text-content">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+
+                            <ul class="category-list">
+                                <li class="onhover-category-list">
+                                    <a href="javascript:void(0)" class="category-name">
+                                        <img src="../assets/svg/1/vegetable.svg" alt="">
+                                        <h6>Vegetables & Fruit</h6>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+
+                                    <div class="onhover-category-box">
+                                        <div class="list-1">
+                                            <div class="category-title-box">
+                                                <h5>Organic Vegetables</h5>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)">Potato & Tomato</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Cucumber & Capsicum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Leafy Vegetables</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Root Vegetables</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Beans & Okra</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Cabbage & Cauliflower</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Gourd & Drumstick</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Specialty</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="list-2">
+                                            <div class="category-title-box">
+                                                <h5>Fresh Fruit</h5>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)">Banana & Papaya</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Kiwi, Citrus Fruit</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Apples & Pomegranate</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Seasonal Fruits</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Mangoes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Fruit Baskets</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="onhover-category-list">
+                                    <a href="javascript:void(0)" class="category-name">
+                                        <img src="../assets/svg/1/cup.svg" alt="">
+                                        <h6>Beverages</h6>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+
+                                    <div class="onhover-category-box w-100">
+                                        <div class="list-1">
+                                            <div class="category-title-box">
+                                                <h5>Energy & Soft Drinks</h5>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)">Soda & Cocktail Mix</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Soda & Cocktail Mix</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Sports & Energy Drinks</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Non Alcoholic Drinks</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Packaged Water</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Spring Water</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Flavoured Water</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                        <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                            <div class="offcanvas-header navbar-shadow">
+                                <h5>Menu</h5>
+                                <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown dropdown-mega">
+                                        <a class="nav-link dropdown-toggle ps-xl-2 ps-0" href="javascript:void(0)"
+                                            data-bs-toggle="dropdown">Home</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="index.html">Kartshop</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                                            data-bs-toggle="dropdown">Compañia</a>
+
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="shop-category-slider.html">Shop
+                                                    Category Slider</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="shop-category.html">Shop
+                                                    Category Sidebar</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="shop-banner.html">Shop Banner</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="shop-left-sidebar.html">Shop Left
+                                                    Sidebar</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="shop-list.html">Shop List</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="shop-right-sidebar.html">Shop
+                                                    Right Sidebar</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="shop-top-filter.html">Shop Top
+                                                    Filter</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                                            data-bs-toggle="dropdown">Seller</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="seller-become.html">Become a
+                                                    Seller</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="seller-dashboard.html">Seller
+                                                    Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="seller-detail.html">Seller
+                                                    Detail</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="seller-detail-2.html">Seller
+                                                    Detail 2</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="seller-grid.html">Seller Grid</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="seller-grid-2.html">Seller Grid
+                                                    2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-nav">
+                        <div class="nav-number">
+                            <img src="../assets/images/icon/music.png" class="img-fluid blur-up lazyload"
+                                alt="">
+                            <span>(123) 456 7890</span>
+                        </div>
+                        <a href="javascript:void(0)" class="btn theme-bg-color ms-3 fire-button"
+                            data-bs-toggle="modal" data-bs-target="#deal-box">
+                            <div class="fire">
+                                <img src="../assets/images/icon/hot-sale.png" class="img-fluid" alt="">
+                            </div>
+                            <span>Hot Deals</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
