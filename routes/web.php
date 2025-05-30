@@ -32,6 +32,6 @@ Route::prefix('company')->group(function () {
 
     Route::get('/faq', function () {
         return view('company.faq');
-    })->name('company');
+    })->name('company.faq');
 });
 require __DIR__ . '/auth.php';
