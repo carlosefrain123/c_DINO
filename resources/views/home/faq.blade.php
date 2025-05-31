@@ -7,8 +7,9 @@
                     <h2>Preguntas Frecuentes</h2>
                     <p>Resolvemos las dudas más comunes sobre DINO S.R.L., su relación con Cementos Pacasmayo y su
                         impacto en el sector de la construcción. Si tienes más consultas, puedes escribirnos
-                        directamente desde nuestra <a href="#" class="theme-color text-decoration-underline">página
-                            de contacto</a>.</p>
+                        directamente desde nuestra <a href="#" class="theme-color" style="text-decoration: none">
+                            página de contacto
+                        </a>.</p>
                 </div>
             </div>
 
@@ -105,9 +106,15 @@
                             <div id="collapseFive" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <p>Sí. Estamos en constante búsqueda de talento. Puedes enviarnos tu CV mediante
-                                        nuestro formulario de contacto o revisar próximamente la sección "Trabaja con
-                                        nosotros", donde publicaremos nuestras vacantes activas.</p>
+                                    <p>
+                                        Sí. Estamos en constante búsqueda de talento. Puedes enviarnos tu CV mediante
+                                        nuestro formulario de contacto o revisar próximamente la sección
+                                        <a href="https://ats.rankmi.com/tenants/1060/organizations/pacasmayo"
+                                            class="theme-color" style="text-decoration: none" target="_blank"
+                                            rel="noopener noreferrer">
+                                            "Trabaja con Nosotros"
+                                        </a>, donde publicaremos nuestras vacantes activas.
+                                    </p>
                                 </div>
                             </div>
                         </div>
