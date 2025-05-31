@@ -359,7 +359,7 @@
                                         <ul class="dropdown-menu">
                                             <li>
                                                 <a class="dropdown-item"
-                                                    href="{{ route('company.about') }}">Compañia</a>
+                                                    href="{{ route('company.about') }}">Nosotros</a>
                                             </li>
                                             <li class="sub-dropdown-hover">
                                                 <a class="dropdown-item" href="javascript:void(0)">Direcciones<span class="new-text"><i
