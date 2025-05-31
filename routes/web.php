@@ -22,16 +22,45 @@ Route::prefix('company')->group(function () {
         return view('company.about_us');
     })->name('company.about');
 
-    Route::get('/team', function () {
-        return view('company.team');
-    })->name('company.team');
+    // ✅ NUEVAS RUTAS: DIRECCIONES DE SEDES
+    Route::prefix('directions')->group(function () {
+        Route::get('/cajamarca', function () {
+            return view('company.directions.cajamarca');
+        })->name('company.directions.cajamarca');
 
-    Route::get('/testimonials', function () {
-        return view('company.testimonials');
-    })->name('company.testimonials');
+        Route::get('/chiclayo', function () {
+            return view('company.directions.chiclayo');
+        })->name('company.directions.chiclayo');
 
-    Route::get('/faq', function () {
-        return view('company.faq');
-    })->name('company.faq');
+        Route::get('/chimbote', function () {
+            return view('company.directions.chimbote');
+        })->name('company.directions.chimbote');
+
+        Route::get('/moche', function () {
+            return view('company.directions.moche');
+        })->name('company.directions.moche');
+
+        Route::get('/pacasmayo', function () {
+            return view('company.directions.pacasmayo');
+        })->name('company.directions.pacasmayo');
+
+        Route::get('/trujillo', function () {
+            return view('company.directions.trujillo');
+        })->name('company.directions.trujillo');
+
+        Route::get('/tarapoto', function () {
+            return view('company.directions.tarapoto');
+        })->name('company.directions.tarapoto');
+
+        Route::get('/piura', function () {
+            return view('company.directions.piura');
+        })->name('company.directions.piura');
+
+        // (opcional) Ruta general para mostrar todas las sedes
+        Route::get('/', function () {
+            return view('company.directions.index'); // ← si decides crear una vista general
+        })->name('company.directions.index');
+    });
 });
+
 require __DIR__ . '/auth.php';

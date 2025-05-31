@@ -206,7 +206,7 @@
                             <ul class="category-list">
                                 <li class="onhover-category-list">
                                     <a href="javascript:void(0)" class="category-name">
-                                        <img src="../assets/svg/1/vegetable.svg" alt="">
+                                        <img src="{{asset('assets/svg/1/vegetable.svg')}}" alt="">
                                         <h6>Vegetables & Fruit</h6>
                                         <i class="fa-solid fa-angle-right"></i>
                                     </a>
@@ -352,67 +352,52 @@
                                         </ul>
 
                                     </li>
-
-                                    <li class="nav-item dropdown">
+                                    <li class="nav-item dropdown new-nav-item">
+                                        {{-- <label class="new-dropdown">New</label> --}}
                                         <a class="nav-link dropdown-toggle" href="javascript:void(0)"
                                             data-bs-toggle="dropdown">Compañia</a>
-
                                         <ul class="dropdown-menu">
                                             <li>
                                                 <a class="dropdown-item"
-                                                    href="{{ route('company.about') }}">Compañi</a>
+                                                    href="{{ route('company.about') }}">Compañia</a>
                                             </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-category.html">Shop
-                                                    Category Sidebar</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-banner.html">Shop Banner</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-left-sidebar.html">Shop Left
-                                                    Sidebar</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-list.html">Shop List</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-right-sidebar.html">Shop
-                                                    Right Sidebar</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-top-filter.html">Shop Top
-                                                    Filter</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                            data-bs-toggle="dropdown">Seller</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item" href="seller-become.html">Become a
-                                                    Seller</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="seller-dashboard.html">Seller
-                                                    Dashboard</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="seller-detail.html">Seller
-                                                    Detail</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="seller-detail-2.html">Seller
-                                                    Detail 2</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="seller-grid.html">Seller Grid</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="seller-grid-2.html">Seller Grid
-                                                    2</a>
+                                            <li class="sub-dropdown-hover">
+                                                <a class="dropdown-item" href="javascript:void(0)">Direcciones<span class="new-text"><i
+                                                            class="fa-solid fa-bolt-lightning"></i></span></a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a
+                                                            href="{{ route('company.directions.cajamarca') }}">Cajamarca</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="{{ route('company.directions.chiclayo') }}">Chiclayo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="{{ route('company.directions.chimbote') }}">Chimbote</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="{{ route('company.directions.moche') }}">Moche</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="{{ route('company.directions.pacasmayo') }}">Pacasmayo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="{{ route('company.directions.piura') }}">Piura</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="{{ route('company.directions.tarapoto') }}">Tarapoto</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="{{ route('company.directions.trujillo') }}">Trujillo</a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </li>
@@ -423,14 +408,14 @@
 
                     <div class="right-nav">
                         <div class="nav-number">
-                            <img src="../assets/images/icon/music.png" class="img-fluid blur-up lazyload"
+                            <img src="{{ asset('assets/images/icon/music.png') }}" class="img-fluid blur-up lazyload"
                                 alt="">
                             <span>(123) 456 7890</span>
                         </div>
                         <a href="javascript:void(0)" class="btn theme-bg-color ms-3 fire-button"
                             data-bs-toggle="modal" data-bs-target="#deal-box">
                             <div class="fire">
-                                <img src="../assets/images/icon/hot-sale.png" class="img-fluid" alt="">
+                                <img src="{{asset('assets/images/icon/hot-sale.png') }}" class="img-fluid" alt="">
                             </div>
                             <span>Hot Deals</span>
                         </a>
