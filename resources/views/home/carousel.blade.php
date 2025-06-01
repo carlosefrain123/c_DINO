@@ -18,13 +18,10 @@
                                             <div class="input-group-text">
                                                 <select class="form-select">
                                                     <option selected="">Selecciona categoría</option>
-                                                    <option value="1">Cemento y Concreto</option>
-                                                    <option value="2">Fierro de construcción</option>
-                                                    <option value="3">Bloques y Adoquines</option>
-                                                    <option value="4">Tuberías y Accesorios</option>
-                                                    <option value="5">Acabados y Pinturas</option>
-                                                    <option value="6">Herramientas y Maquinaria</option>
-                                                    <option value="7">Servicios Especializados</option>
+                                                    @foreach ($post->categories as $category)
+                                                        <option value="{{ $category->id }}">{{ $category->name }}
+                                                        </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
