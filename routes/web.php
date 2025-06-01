@@ -6,24 +6,25 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'index'])->name('home');
 
-Route::get('/{id}/{slug}', [PostController::class, 'show'])->name('posts.show');
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// 👥 RUTAS PROTEGIDAS POR AUTH
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::prefix('company')->group(function () {
 
+// 🌐 SECCIÓN COMPANY (incluye about-us y direcciones)
+Route::prefix('company')->group(function () {
+    // 🔹 Ruta de "Nosotros"
     Route::get('/about-us', function () {
         return view('company.about_us');
     })->name('company.about');
 
-    // ✅ NUEVAS RUTAS: DIRECCIONES DE SEDES
+    // 🔹 Rutas de sedes (directions)
     Route::prefix('directions')->group(function () {
         Route::get('/cajamarca', function () {
             return view('company.directions.cajamarca');
@@ -57,11 +58,14 @@ Route::prefix('company')->group(function () {
             return view('company.directions.piura');
         })->name('company.directions.piura');
 
-        // (opcional) Ruta general para mostrar todas las sedes
+        // (Opcional) Ruta general para todas las sedes
         Route::get('/', function () {
-            return view('company.directions.index'); // ← si decides crear una vista general
+            return view('company.directions.index');
         })->name('company.directions.index');
     });
 });
+
+// ⚠️ ESTA RUTA DINÁMICA DEBE IR AL FINAL
+Route::get('/{id}/{slug}', [PostController::class, 'show'])->name('posts.show');
 
 require __DIR__ . '/auth.php';
