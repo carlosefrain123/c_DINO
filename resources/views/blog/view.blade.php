@@ -10,7 +10,7 @@
                 <div class="col-12">
                     <div class="breadcrumb-contain">
                         @foreach ($post->categories as $category)
-                        <h2>{{ $category->name }}</h2>
+                            <h2>{{ $category->name }}</h2>
                         @endforeach
                         <nav>
                             <ol class="breadcrumb mb-0">
@@ -48,67 +48,33 @@
                                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#panelsStayOpen-collapseOne">
-                                        Recent Post
+                                        Publicaciones Recientes
                                     </button>
                                 </h2>
                                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                     <div class="accordion-body pt-0">
                                         <div class="recent-post-box">
-                                            <div class="recent-box">
-                                                <a href="blog-detail.html" class="recent-image">
-                                                    <img src="../assets/images/inner-page/blog/1.jpg"
-                                                        class="img-fluid blur-up lazyload" alt="">
-                                                </a>
-
-                                                <div class="recent-detail">
-                                                    <a href="blog-detail.html">
-                                                        <h5 class="recent-name">Green onion knife and salad placed</h5>
+                                            @foreach ($latestPosts as $index => $post)
+                                                <div class="recent-box">
+                                                    <!-- Imagen dinámica -->
+                                                    <a href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}"
+                                                        class="recent-image">
+                                                        <img src="{{ asset('storage/' . $post->featured_image) }}"
+                                                            class="img-fluid blur-up lazyload" alt="{{ $post->title }}">
                                                     </a>
-                                                    <h6>25 Jan, 2022 <i data-feather="thumbs-up"></i></h6>
+
+                                                    <div class="recent-detail">
+                                                        <!-- Título dinámico -->
+                                                        <a
+                                                            href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}">
+                                                            <h5 class="recent-name">{{ $post->title }}</h5>
+                                                        </a>
+
+                                                        <!-- Fecha de publicación -->
+                                                        <h6>{{ $post->published_at->translatedFormat('d M, Y') }}</h6>
+                                                    </div>
                                                 </div>
-                                            </div>
-
-                                            <div class="recent-box">
-                                                <a href="blog-detail.html" class="recent-image">
-                                                    <img src="../assets/images/inner-page/blog/2.jpg"
-                                                        class="img-fluid blur-up lazyload" alt="">
-                                                </a>
-
-                                                <div class="recent-detail">
-                                                    <a href="blog-detail.html">
-                                                        <h5 class="recent-name">Health and skin for your organic</h5>
-                                                    </a>
-                                                    <h6>25 Jan, 2022 <i data-feather="thumbs-up"></i></h6>
-                                                </div>
-                                            </div>
-
-                                            <div class="recent-box">
-                                                <a href="blog-detail.html" class="recent-image">
-                                                    <img src="../assets/images/inner-page/blog/3.jpg"
-                                                        class="img-fluid blur-up lazyload" alt="">
-                                                </a>
-
-                                                <div class="recent-detail">
-                                                    <a href="blog-detail.html">
-                                                        <h5 class="recent-name">Organics mix masala fresh & soft</h5>
-                                                    </a>
-                                                    <h6>25 Jan, 2022 <i data-feather="thumbs-up"></i></h6>
-                                                </div>
-                                            </div>
-
-                                            <div class="recent-box">
-                                                <a href="blog-detail.html" class="recent-image">
-                                                    <img src="../assets/images/inner-page/blog/4.jpg"
-                                                        class="img-fluid blur-up lazyload" alt="">
-                                                </a>
-
-                                                <div class="recent-detail">
-                                                    <a href="blog-detail.html">
-                                                        <h5 class="recent-name">Fresh organics brand and picnic</h5>
-                                                    </a>
-                                                    <h6>25 Jan, 2022 <i data-feather="thumbs-up"></i></h6>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +87,7 @@
                                         Category
                                     </button>
                                 </h2>
-                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse collapse show">
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
                                     <div class="accordion-body p-0">
                                         <div class="category-list-box">
                                             <ul>
@@ -191,7 +157,7 @@
                                         Product Tags
                                     </button>
                                 </h2>
-                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse collapse show">
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
                                     <div class="accordion-body pt-0">
                                         <div class="product-tags-box">
                                             <ul>
@@ -238,7 +204,7 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#panelsStayOpen-collapseFour">Trending Products</button>
                                 </h2>
-                                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse collapse show">
+                                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show">
                                     <div class="accordion-body">
                                         <ul class="product-list product-list-2 border-0 p-0">
                                             <li>
@@ -307,7 +273,8 @@
 
                 <div class="col-xxl-9 col-xl-8 col-lg-7 ratio_50">
                     <div class="blog-detail-image rounded-3 mb-4">
-                        <img src="{{ asset('storage/' . $post->featured_image) }}" class="bg-img blur-up lazyload" alt="">
+                        <img src="{{ asset('storage/' . $post->featured_image) }}" class="bg-img blur-up lazyload"
+                            alt="">
                         <div class="blog-image-contain">
                             <ul class="contain-list">
                                 <li>backpack</li>

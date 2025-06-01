@@ -21,12 +21,14 @@ class PostController extends Controller
         // Buscar el post por ID
         $post = Post::with(['user', 'categories'])->findOrFail($id);
 
+        $latestPosts = Post::latest('published_at')->take(value: 4)->get();
+
         // Verificar que el slug en la URL coincida con el slug del post
         if ($post->slug !== $slug) {
             abort(404); // Mostrar error 404 si no coincide
         }
 
         // Retornar la vista con los datos del post
-        return view('blog.view', compact('post'));
+        return view('blog.view', compact('post','latestPosts'));
     }
 }
