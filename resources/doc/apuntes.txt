@@ -57,3 +57,6 @@ php artisan make:mail PasswordChanged --markdown=emails.password-changed
 
 10
 php artisan storage:link
+
+11. Se ejecuta el comando de migración, para colocar las imágenes
+php artisan migrate:fresh --seed

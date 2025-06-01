@@ -16,6 +16,16 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
+          $exampleImages = [
+            'blog/1.png',
+            'blog/2.png',
+            'blog/3.png',
+            'blog/4.png',
+            'blog/5.png',
+            'blog/6.png',
+            'blog/7.png',
+        ];
+
         return [
             'user_id' => \App\Models\User::inRandomOrder()->first()->id,
             'title' => $this->faker->sentence(),
@@ -23,7 +33,7 @@ class PostFactory extends Factory
             'content' => $this->faker->paragraphs(5, true),
             'summary' => $this->faker->sentence(),
             'status' => $this->faker->randomElement(['draft', 'published', 'archived']),
-            'featured_image' => $this->faker->imageUrl(640,480,'posts'),
+            'featured_image' => $this->faker->randomElement($exampleImages),
             'published_at' => $this->faker->dateTimeThisYear(),
             'created_at' => now(),
             'updated_at' => now(),
