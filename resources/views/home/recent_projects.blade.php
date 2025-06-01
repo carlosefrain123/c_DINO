@@ -10,13 +10,13 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-box">
                         <div class="blog-box-image">
-                            <a href="#" class="blog-image">
+                            <a href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}" class="blog-image">
                                 <!-- asset('storage/' . $post->featured_image)-->
                                 <img src="{{ asset('storage/' . $post->featured_image)}}"
                                     class="bg-img blur-up lazyload" alt="{{ $post->title }}">
                             </a>
                         </div>
-                        <a href="#" class="blog-detail">
+                        <a href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}" class="blog-detail">
                             <h5>{{ $post->title }}</h5>
                         </a>
                     </div>
