@@ -8,7 +8,7 @@
                     @foreach ($latestPosts as $post)
                         <div>
                             <div class="home-contain rounded-0 p-0">
-                                <img src="{{ asset('assets/images/veg-3/banner/' . $post->featured_image) }}"
+                                <img src="{{ asset('storage/' . $post->featured_image)}}"
                                     class="img-fluid bg-img blur-up lazyload bg-top" alt="{{ $post->title }}">
                                 <div class="home-detail p-center text-center home-overlay position-relative">
                                     <div class="content">

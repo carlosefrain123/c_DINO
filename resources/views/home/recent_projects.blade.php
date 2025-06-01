@@ -12,7 +12,7 @@
                         <div class="blog-box-image">
                             <a href="#" class="blog-image">
                                 <!-- asset('storage/' . $post->featured_image)-->
-                                <img src="{{ asset('assets/images/veg-3/banner/' . $post->featured_image)}}"
+                                <img src="{{ asset('storage/' . $post->featured_image)}}"
                                     class="bg-img blur-up lazyload" alt="{{ $post->title }}">
                             </a>
                         </div>
