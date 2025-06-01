@@ -4,7 +4,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="slider-animate">
-                    @foreach ($posts as $post)
+                    {{-- El latestPosts es el carrusel, no te olvides. No contiene route --}}
+                    @foreach ($latestPosts as $post)
                         <div>
                             <div class="home-contain rounded-0 p-0">
                                 <img src="{{ asset('assets/images/veg-3/banner/' . $post->featured_image) }}"
