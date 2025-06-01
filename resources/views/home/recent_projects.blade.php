@@ -6,61 +6,22 @@
         </div>
 
         <div class="slider-4-blog ratio_50 no-arrow">
-            <!-- Proyecto Motu -->
-            <div>
-                <div class="blog-box">
-                    <div class="blog-box-image">
-                        <a href="blog-detail.html" class="blog-image">
-                            <img src="../assets/images/projects/project1.jpg" class="bg-img blur-up lazyload" alt="Proyecto Motu">
+            @foreach ($allPosts as $post)
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-box">
+                        <div class="blog-box-image">
+                            <a href="#" class="blog-image">
+                                <!-- asset('storage/' . $post->featured_image)-->
+                                <img src="{{ asset('assets/images/veg-3/banner/' . $post->featured_image)}}"
+                                    class="bg-img blur-up lazyload" alt="{{ $post->title }}">
+                            </a>
+                        </div>
+                        <a href="#" class="blog-detail">
+                            <h5>{{ $post->title }}</h5>
                         </a>
                     </div>
-                    <a href="blog-detail.html" class="blog-detail">
-                        <h5>Proyecto Motu</h5>
-                    </a>
                 </div>
-            </div>
-
-            <!-- Proyecto KAM Yanacocha -->
-            <div>
-                <div class="blog-box">
-                    <div class="blog-box-image">
-                        <a href="blog-detail.html" class="blog-image">
-                            <img src="../assets/images/projects/project2.jpg" class="bg-img blur-up lazyload" alt="KAM Yanacocha">
-                        </a>
-                    </div>
-                    <a href="blog-detail.html" class="blog-detail">
-                        <h5>Proyecto KAM Yanacocha</h5>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Proyecto KAM Tarata -->
-            <div>
-                <div class="blog-box">
-                    <div class="blog-box-image">
-                        <a href="blog-detail.html" class="blog-image">
-                            <img src="../assets/images/projects/project3.jpg" class="bg-img blur-up lazyload" alt="KAM Tarata">
-                        </a>
-                    </div>
-                    <a href="blog-detail.html" class="blog-detail">
-                        <h5>Proyecto KAM Tarata</h5>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Proyecto Residencial Privado -->
-            <div>
-                <div class="blog-box">
-                    <div class="blog-box-image">
-                        <a href="blog-detail.html" class="blog-image">
-                            <img src="../assets/images/projects/project4.jpg" class="bg-img blur-up lazyload" alt="Residencial Privado">
-                        </a>
-                    </div>
-                    <a href="blog-detail.html" class="blog-detail">
-                        <h5>Obra Residencial Privada</h5>
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
