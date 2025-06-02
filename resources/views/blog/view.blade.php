@@ -137,11 +137,6 @@
                         <img src="{{ asset('storage/' . $post->featured_image) }}" class="bg-img blur-up lazyload"
                             alt="">
                         <div class="blog-image-contain">
-                            <ul class="contain-list">
-                                <li>backpack</li>
-                                <li>life style</li>
-                                <li>organic</li>
-                            </ul>
                             <h2>{{ $post->title }}</h2>
                             <ul class="contain-comment-list">
                                 <li>
