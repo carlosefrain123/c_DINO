@@ -54,27 +54,25 @@
                                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                     <div class="accordion-body pt-0">
                                         <div class="recent-post-box">
-                                            @foreach ($latestPosts as $index => $post)
+                                            @foreach ($latestPosts as $latestPost)
                                                 <div class="recent-box">
-                                                    <!-- Imagen dinámica -->
-                                                    <a href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}"
+                                                    <a href="{{ route('posts.show', ['id' => $latestPost->id, 'slug' => $latestPost->slug]) }}"
                                                         class="recent-image">
-                                                        <img src="{{ asset('storage/' . $post->featured_image) }}"
-                                                            class="img-fluid blur-up lazyload" alt="{{ $post->title }}">
+                                                        <img src="{{ asset('storage/' . $latestPost->featured_image) }}"
+                                                            class="img-fluid blur-up lazyload"
+                                                            alt="{{ $latestPost->title }}">
                                                     </a>
 
                                                     <div class="recent-detail">
-                                                        <!-- Título dinámico -->
                                                         <a
-                                                            href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}">
-                                                            <h5 class="recent-name">{{ $post->title }}</h5>
+                                                            href="{{ route('posts.show', ['id' => $latestPost->id, 'slug' => $latestPost->slug]) }}">
+                                                            <h5 class="recent-name">{{ $latestPost->title }}</h5>
                                                         </a>
-
-                                                        <!-- Fecha de publicación -->
-                                                        <h6>{{ $post->published_at->translatedFormat('d M, Y') }}</h6>
+                                                        <h6>{{ $latestPost->published_at->translatedFormat('d M, Y') }}</h6>
                                                     </div>
                                                 </div>
                                             @endforeach
+
                                         </div>
                                     </div>
                                 </div>
@@ -161,38 +159,11 @@
                                     <div class="accordion-body pt-0">
                                         <div class="product-tags-box">
                                             <ul>
-
-                                                <li>
-                                                    <a href="javascript:void(0)">Fruit Cutting</a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="javascript:void(0)">Meat</a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="javascript:void(0)">organic</a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="javascript:void(0)">cake</a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="javascript:void(0)">pick fruit</a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="javascript:void(0)">backery</a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="javascript:void(0)">organix food</a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="javascript:void(0)">Most Expensive Fruit</a>
-                                                </li>
+                                                @foreach ($post->tags as $tag)
+                                                    <li>
+                                                        <a href="javascript:void(0)">{{ $tag->name }}</a>
+                                                    </li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                     </div>
