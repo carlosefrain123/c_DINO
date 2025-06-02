@@ -28,6 +28,7 @@
 </section>
 <!-- Fin sección de inicio -->
 
+
 <!-- Sección de categorías destacadas -->
 <section class="feature-category-panel pt-0">
     <div class="container-fluid-lg">
