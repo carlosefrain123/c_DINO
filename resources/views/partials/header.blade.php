@@ -162,13 +162,7 @@
 
                             <ul class="right-side-menu">
                                 <li class="right-side">
-                                    <div class="delivery-login-box">
-                                        <div class="delivery-icon">
-                                            <div class="search-box">
-                                                <i data-feather="search"></i>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </li>
                                 <li class="right-side onhover-dropdown">
                                     <div class="delivery-login-box">
