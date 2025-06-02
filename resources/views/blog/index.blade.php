@@ -85,8 +85,7 @@
                                                             href="{{ route('posts.show', ['id' => $latestPost->id, 'slug' => $latestPost->slug]) }}">
                                                             <h5 class="recent-name">{{ $latestPost->title }}</h5>
                                                         </a>
-                                                        <h6>{{ $latestPost->published_at->translatedFormat('d M, Y') }} <i
-                                                                data-feather="thumbs-up"></i></h6>
+                                                        <h6>{{ $latestPost->published_at->translatedFormat('d M, Y') }}</h6>
                                                     </div>
                                                 </div>
                                             @endforeach
