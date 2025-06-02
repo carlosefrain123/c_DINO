@@ -65,6 +65,8 @@ Route::prefix('company')->group(function () {
     });
 });
 
+Route::get('/blogs', [PostController::class, 'blog'])->name('blog.index');
+
 // ⚠️ ESTA RUTA DINÁMICA DEBE IR AL FINAL
 Route::get('/{id}/{slug}', [PostController::class, 'show'])->name('posts.show');
 

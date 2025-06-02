@@ -47075,3 +47075,6 @@ body.rtl .theme-product-section .right-box-contain .license-list .accordion-item
 #servicios-dino p {
   font-size: 0.95rem;
 }
+.no-icon::before {
+        content: none !important;
+}

@@ -206,7 +206,7 @@
                             <ul class="category-list">
                                 <li class="onhover-category-list">
                                     <a href="javascript:void(0)" class="category-name">
-                                        <img src="{{asset('assets/svg/1/vegetable.svg')}}" alt="">
+                                        <img src="{{ asset('assets/svg/1/vegetable.svg') }}" alt="">
                                         <h6>Vegetables & Fruit</h6>
                                         <i class="fa-solid fa-angle-right"></i>
                                     </a>
@@ -362,7 +362,8 @@
                                                     href="{{ route('company.about') }}">Nosotros</a>
                                             </li>
                                             <li class="sub-dropdown-hover">
-                                                <a class="dropdown-item" href="javascript:void(0)">Direcciones<span class="new-text"><i
+                                                <a class="dropdown-item" href="javascript:void(0)">Direcciones<span
+                                                        class="new-text"><i
                                                             class="fa-solid fa-bolt-lightning"></i></span></a>
                                                 <ul class="sub-menu">
                                                     <li>
@@ -378,16 +379,14 @@
                                                             href="{{ route('company.directions.chimbote') }}">Chimbote</a>
                                                     </li>
                                                     <li>
-                                                        <a
-                                                            href="{{ route('company.directions.moche') }}">Moche</a>
+                                                        <a href="{{ route('company.directions.moche') }}">Moche</a>
                                                     </li>
                                                     <li>
                                                         <a
                                                             href="{{ route('company.directions.pacasmayo') }}">Pacasmayo</a>
                                                     </li>
                                                     <li>
-                                                        <a
-                                                            href="{{ route('company.directions.piura') }}">Piura</a>
+                                                        <a href="{{ route('company.directions.piura') }}">Piura</a>
                                                     </li>
                                                     <li>
                                                         <a
@@ -400,6 +399,11 @@
                                                 </ul>
                                             </li>
                                         </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link ps-xl-2 ps-0 no-icon" href="{{ route('blog.index') }}">
+                                            Blog
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -415,7 +419,8 @@
                         <a href="javascript:void(0)" class="btn theme-bg-color ms-3 fire-button"
                             data-bs-toggle="modal" data-bs-target="#deal-box">
                             <div class="fire">
-                                <img src="{{asset('assets/images/icon/hot-sale.png') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/images/icon/hot-sale.png') }}" class="img-fluid"
+                                    alt="">
                             </div>
                             <span>Hot Deals</span>
                         </a>
