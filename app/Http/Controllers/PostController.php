@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -23,12 +24,14 @@ class PostController extends Controller
 
         $latestPosts = Post::latest('published_at')->take(value: 4)->get();
 
+        $categories = Category::with('posts')->get();
+
         // Verificar que el slug en la URL coincida con el slug del post
         if ($post->slug !== $slug) {
             abort(404); // Mostrar error 404 si no coincide
         }
 
         // Retornar la vista con los datos del post
-        return view('blog.view', compact('post','latestPosts'));
+        return view('blog.view', compact('post','latestPosts','categories'));
     }
 }
