@@ -8,24 +8,13 @@
                     @foreach ($latestPosts as $post)
                         <div>
                             <div class="home-contain rounded-0 p-0">
-                                <img src="{{ asset('storage/' . $post->featured_image)}}"
+                                <img src="{{ asset('storage/' . $post->featured_image) }}"
                                     class="img-fluid bg-img blur-up lazyload bg-top" alt="{{ $post->title }}">
                                 <div class="home-detail p-center text-center home-overlay position-relative">
                                     <div class="content">
                                         <h1>{{ $post->title }}</h1>
                                         <h3>{{ $post->summary }}</h3>
-                                        <div class="search-box input-group">
-                                            <input type="search" class="form-control" placeholder="Estoy buscando...">
-                                            <div class="input-group-text">
-                                                <select class="form-select">
-                                                    <option selected="">Selecciona categoría</option>
-                                                    @foreach ($post->categories as $category)
-                                                        <option value="{{ $category->id }}">{{ $category->name }}
-                                                        </option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                        </div>
+                                        @include('home.buscar')
                                     </div>
                                 </div>
                             </div>
