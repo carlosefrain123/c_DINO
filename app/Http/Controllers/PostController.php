@@ -34,4 +34,12 @@ class PostController extends Controller
         // Retornar la vista con los datos del post
         return view('blog.view', compact('post','latestPosts','categories'));
     }
+    public function blog()
+    {
+        // Obtener todos los posts paginados (9 por página)
+        $allPosts = Post::with(['user', 'categories'])->latest('published_at')->paginate(9);
+        $categories = Category::with('posts')->get();
+        $latestPosts = Post::latest('published_at')->take(value: 4)->get();
+        return view('blog.index', compact('allPosts','categories','latestPosts'));
+    }
 }
