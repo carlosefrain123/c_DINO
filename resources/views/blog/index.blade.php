@@ -9,79 +9,47 @@
             <div class="row g-4">
                 <div class="col-xxl-9 col-xl-8 col-lg-7 order-lg-2">
                     <div class="row g-4 ratio_65">
-                        <div class="col-xxl-4 col-sm-6">
-                            <div class="blog-box wow fadeInUp">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html">
-                                        <img src="../assets/images/inner-page/blog/1.jpg" class="bg-img blur-up lazyload"
-                                            alt="">
-                                    </a>
-                                </div>
-
-                                <div class="blog-contain">
-                                    <div class="blog-label">
-                                        <span class="time"><i data-feather="clock"></i> <span>25 Feg, 2022</span></span>
-                                        <span class="super"><i data-feather="user"></i> <span>Mark J.
-                                                Speight</span></span>
+                        @foreach ($allPosts as $post)
+                            <div class="col-xxl-4 col-sm-6">
+                                <div class="blog-box wow fadeInUp">
+                                    <div class="blog-image">
+                                        <a href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}">
+                                            <img src="{{ asset('storage/' . $post->featured_image) }}" class="bg-img blur-up lazyload"
+                                                alt="">
+                                        </a>
                                     </div>
-                                    <a href="blog-detail.html">
-                                        <h3>one pot creamy mediterranean chicken pasta cream.</h3>
-                                    </a>
-                                    <button onclick="location.href = 'blog-detail.html';" class="blog-button">Read More
-                                        <i class="fa-solid fa-right-long"></i></button>
+
+                                    <div class="blog-contain">
+                                        <div class="blog-label">
+                                            <span class="time">
+                                                <i data-feather="clock"></i>
+                                                <span>{{ $post->published_at->format('d M, Y') }}</span>
+                                            </span>
+                                            <span class="super">
+                                                <i data-feather="user"></i>
+                                                <span>{{ $post->user->name }}</span>
+                                            </span>
+                                        </div>
+                                        <a href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}">
+                                            <h3>{{ Str::limit($post->title, 60) }}</h3>
+                                        </a>
+                                        <button
+                                            onclick="location.href='{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}'"
+                                            class="blog-button">
+                                            Read More <i class="fa-solid fa-right-long"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-xxl-4 col-sm-6">
-                            <div class="blog-box wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html">
-                                        <img src="../assets/images/inner-page/blog/4.jpg" class="bg-img blur-up lazyload"
-                                            alt="">
-                                    </a>
-                                </div>
-
-                                <div class="blog-contain">
-                                    <div class="blog-label">
-                                        <span class="time"><i data-feather="clock"></i> <span>25 Feg, 2022</span></span>
-                                        <span class="super"><i data-feather="user"></i> <span>Chris C.
-                                                Hall</span></span>
-                                    </div>
-                                    <a href="blog-detail.html">
-                                        <h3>Vegina good quality special liquide fesh vegetables.</h3>
-                                    </a>
-                                    <button onclick="location.href = 'blog-detail.html';" class="blog-button">Read More
-                                        <i class="fa-solid fa-right-long"></i></button>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
 
-                    <nav class="custom-pagination">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="javascript:void(0)" tabindex="-1">
-                                    <i class="fa-solid fa-angles-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item active">
-                                <a class="page-link" href="javascript:void(0)">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="javascript:void(0)">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="javascript:void(0)">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="javascript:void(0)">
-                                    <i class="fa-solid fa-angles-right"></i>
-                                </a>
-                            </li>
-                        </ul>
+                    {{-- Paginación --}}
+                    <nav class="custom-pagination mt-4">
+                        {{ $allPosts->links('pagination::bootstrap-5') }}
                     </nav>
                 </div>
+
 
                 <div class="col-xxl-3 col-xl-4 col-lg-5 order-lg-1">
                     <div class="left-sidebar-box wow fadeInUp">
