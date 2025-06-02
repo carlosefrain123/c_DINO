@@ -91,7 +91,7 @@
                                             <ul>
                                                 @foreach ($categories as $category)
                                                     <li>
-                                                        <a href="blog-list.html">
+                                                        <a href="{{ route('posts.category', $category->slug) }}">
                                                             <div class="category-name">
                                                                 <h5>{{ $category->name }}</h5>
                                                                 <span
