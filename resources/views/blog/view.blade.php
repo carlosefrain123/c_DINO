@@ -120,7 +120,7 @@
                                             <ul>
                                                 @foreach ($post->tags as $tag)
                                                     <li>
-                                                        <a href="javascript:void(0)">{{ $tag->name }}</a>
+                                                        <a href="{{ route('posts.tag', $tag->slug) }}">{{ $tag->name }}</a>
                                                     </li>
                                                 @endforeach
                                             </ul>
