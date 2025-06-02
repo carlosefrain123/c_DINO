@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -32,14 +33,17 @@ class PostController extends Controller
         }
 
         // Retornar la vista con los datos del post
-        return view('blog.view', compact('post','latestPosts','categories'));
+        return view('blog.view', compact('post', 'latestPosts', 'categories'));
     }
+
     public function blog()
     {
-        // Obtener todos los posts paginados (9 por página)
         $allPosts = Post::with(['user', 'categories'])->latest('published_at')->paginate(9);
         $categories = Category::with('posts')->get();
-        $latestPosts = Post::latest('published_at')->take(value: 4)->get();
-        return view('blog.index', compact('allPosts','categories','latestPosts'));
+        $latestPosts = Post::latest('published_at')->take(4)->get();
+
+        $tags = Tag::all();  // Trae todas las etiquetas
+
+        return view('blog.index', compact('allPosts', 'categories', 'latestPosts', 'tags'));
     }
 }
