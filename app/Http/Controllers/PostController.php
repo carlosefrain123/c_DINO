@@ -31,8 +31,9 @@ class PostController extends Controller
 
         $latestPosts = Post::latest('published_at')->take(4)->get();
         $categories = Category::with('posts')->get();
+        $tags = Tag::all(); // 👈 AÑADE ESTO
 
-        return view('blog.view', compact('post', 'latestPosts', 'categories'));
+        return view('blog.view', compact('post', 'latestPosts', 'categories', 'tags'));
     }
 
     public function blog(Request $request, $slug = null)
@@ -64,7 +65,7 @@ class PostController extends Controller
         if ($search) {
             $query->where(function ($q) use ($search) {
                 $q->where('title', 'LIKE', '%' . $search . '%')
-                  ->orWhere('content', 'LIKE', '%' . $search . '%');
+                    ->orWhere('content', 'LIKE', '%' . $search . '%');
             });
         }
 
