@@ -190,9 +190,8 @@
                             </div>
 
                             <ul class="right-side-menu">
-                                <li class="right-side">
+                                <li class="right-side"></li>
 
-                                </li>
                                 <li class="right-side onhover-dropdown">
                                     <div class="delivery-login-box">
                                         <div class="delivery-icon">
@@ -220,13 +219,19 @@
                                                 </li>
                                             @else
                                                 <li class="product-box-contain">
-                                                    <a href="{{ route('dashboard') }}">Panel</a>
+                                                    <a href="{{-- {{ route('posts.list') }} --}}">Mis Publicaciones</a>
                                                 </li>
                                                 <li class="product-box-contain">
-                                                    <form action="{{ route('logout') }}" method="POST">
+                                                    <a href="{{-- {{ route('profile.edit') }} --}}">Perfil</a>
+                                                </li>
+                                                <li class="product-box-contain">
+                                                    <a href="#"
+                                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                        Cerrar sesión
+                                                    </a>
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                        style="display: none;">
                                                         @csrf
-                                                        <button type="submit" class="btn btn-link p-0 m-0">Cerrar
-                                                            sesión</button>
                                                     </form>
                                                 </li>
                                             @endguest
@@ -234,6 +239,7 @@
                                     </div>
                                 </li>
                             </ul>
+
                         </div> <!-- /.rightside-box -->
                     </div>
                 </div>
