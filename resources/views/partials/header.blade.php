@@ -141,12 +141,12 @@
                                             </li>
 
                                             <!-- List -->
-                                            <li class="nav-item">
+                                            {{-- <li class="nav-item">
                                                 <a class="nav-link ps-xl-2 ps-0 no-icon"
                                                     href="{{ route('blog.list') }}">
                                                     List
                                                 </a>
-                                            </li>
+                                            </li> --}}
 
                                             <li class="nav-item">
                                                 <a class="nav-link ps-xl-2 ps-0 no-icon {{ Route::is('posts.category') && request()->slug == 'project' ? 'active' : '' }}"
