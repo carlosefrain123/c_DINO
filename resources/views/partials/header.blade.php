@@ -147,6 +147,14 @@
                                                     List
                                                 </a>
                                             </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link ps-xl-2 ps-0 no-icon {{ Route::is('posts.category') && request()->slug == 'project' ? 'active' : '' }}"
+                                                    href="{{ route('posts.category', ['slug' => 'project']) }}">
+                                                    Proyectos
+                                                </a>
+                                            </li>
+
                                         </ul>
                                     </div>
                                 </div>
