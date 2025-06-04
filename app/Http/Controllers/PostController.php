@@ -155,7 +155,7 @@ class PostController extends Controller
             $post->tags()->attach($request->tags);
         }
 
-        return redirect()->route('posts.list')->with('success', '¡Post creado exitosamente!');
+        return redirect()->route('posts.userPosts')->with('success', '¡Post creado exitosamente!');
     }
 
     public function edit($id)
@@ -199,7 +199,7 @@ class PostController extends Controller
         $post->categories()->sync([$request->category_id]);
         $post->tags()->sync($request->tags ?? []);
 
-        return redirect()->route('posts.list')->with('success', '¡Post actualizado exitosamente!');
+        return redirect()->route('posts.userPosts')->with('success', '¡Post actualizado exitosamente!');
     }
 
     public function destroy($id)

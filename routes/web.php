@@ -42,6 +42,9 @@ Route::middleware('auth')->group(function () {
         Route::put('/{id}', [PostController::class, 'update'])->name('posts.update');     // actualizar post
         Route::delete('/{id}', [PostController::class, 'destroy'])->name('posts.destroy'); // eliminar post
     });
+
+    // 👤 Listar posts del usuario autenticado (Dashboard posts)
+    Route::get('/posts/mis-posts', [PostController::class, 'userPosts'])->name('posts.userPosts');
 });
 
 // 🏢 Sección COMPANY

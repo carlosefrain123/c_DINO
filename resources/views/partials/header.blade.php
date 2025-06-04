@@ -219,7 +219,7 @@
                                                 </li>
                                             @else
                                                 <li class="product-box-contain">
-                                                    <a href="{{-- {{ route('posts.list') }} --}}">Mis Publicaciones</a>
+                                                    <a href="{{ route('posts.userPosts') }}">Mis Publicaciones</a>
                                                 </li>
                                                 <li class="product-box-contain">
                                                     <a href="{{-- {{ route('profile.edit') }} --}}">Perfil</a>
