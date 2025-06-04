@@ -11,27 +11,37 @@ Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('/blogs', [PostController::class, 'blog'])->name('blog.index');
 
 // 📃 Blog en vista tipo lista
-Route::get('/blogs/list', [PostController::class, 'list'])->name('blog.list'); // 👈 AQUI VA
+Route::get('/blogs/list', [PostController::class, 'list'])->name('blog.list');
 
 // 📢 Blog solo de avisos
-Route::get('/blogs/notice', [PostController::class, 'notice'])->name('blog.notice'); // 👈 AQUI AGREGA ESTA LÍNEA
+Route::get('/blogs/notice', [PostController::class, 'notice'])->name('blog.notice');
 
 // 📁 Filtrar por categoría
 Route::get('/blogs/category/{slug}', [PostController::class, 'blog'])->name('posts.category');
 
-// 🏷️ Filtrar por etiqueta
+// 🏷 Filtrar por etiqueta
 Route::get('/blogs/tag/{slug}', [PostController::class, 'blog'])->name('posts.tag');
 
-// 🔐 Panel de control
+// 🔐 Panel de control (requiere login)
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// 👥 Rutas de perfil (protegidas por auth)
+// 👥 Rutas de perfil y CRUD protegidas por auth
 Route::middleware('auth')->group(function () {
+    // Perfil
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // ✍ CRUD de Posts (solo usuarios autenticados)
+    Route::prefix('posts')->group(function () {
+        Route::get('/create', [PostController::class, 'create'])->name('posts.create');   // formulario de creación
+        Route::post('/', [PostController::class, 'store'])->name('posts.store');          // guardar post
+        Route::get('/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');    // formulario de edición
+        Route::put('/{id}', [PostController::class, 'update'])->name('posts.update');     // actualizar post
+        Route::delete('/{id}', [PostController::class, 'destroy'])->name('posts.destroy'); // eliminar post
+    });
 });
 
 // 🏢 Sección COMPANY
@@ -43,10 +53,7 @@ Route::prefix('company')->group(function () {
 
     // 🔹 Sedes (direcciones)
     Route::prefix('directions')->group(function () {
-        Route::get('/', function () {
-            return view('company.directions.index');
-        })->name('company.directions.index');
-
+        Route::get('/', fn() => view('company.directions.index'))->name('company.directions.index');
         Route::get('/cajamarca', fn() => view('company.directions.cajamarca'))->name('company.directions.cajamarca');
         Route::get('/chiclayo', fn() => view('company.directions.chiclayo'))->name('company.directions.chiclayo');
         Route::get('/chimbote', fn() => view('company.directions.chimbote'))->name('company.directions.chimbote');
@@ -58,7 +65,7 @@ Route::prefix('company')->group(function () {
     });
 });
 
-// 📄 Mostrar un post individual (al final para evitar conflictos con otras rutas)
+// 📄 Mostrar un post individual (DEBE IR AL FINAL para evitar conflictos)
 Route::get('/{id}/{slug}', [PostController::class, 'show'])->name('posts.show');
 
 // 🔐 Rutas de autenticación
