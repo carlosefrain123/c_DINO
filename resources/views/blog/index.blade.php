@@ -14,8 +14,8 @@
                                 <div class="blog-box wow fadeInUp">
                                     <div class="blog-image">
                                         <a href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}">
-                                            <img src="{{ asset('storage/' . $post->featured_image) }}"
-                                                class="bg-img blur-up lazyload" alt="">
+                                            <img src="{{ asset('storage/' . $post->featured_image) }}" class="bg-img blur-up lazyload"
+                                                alt="">
                                         </a>
                                     </div>
 
@@ -49,11 +49,7 @@
                         {{ $allPosts->links('pagination::bootstrap-5') }}
                     </nav>
                 </div>
-                @include('blog.partials.leftSidebar', [
-                    'latestPosts' => $latestPosts,
-                    'categories' => $categories,
-                    'tags' => $tags,
-                ])
+                @include('blog.partials.leftSidebar')
             </div>
         </div>
     </section>

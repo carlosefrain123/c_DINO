@@ -139,6 +139,14 @@
                                                     Blog
                                                 </a>
                                             </li>
+
+                                            <!-- List -->
+                                            <li class="nav-item">
+                                                <a class="nav-link ps-xl-2 ps-0 no-icon"
+                                                    href="{{ route('blog.list') }}">
+                                                    List
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -162,7 +170,7 @@
 
                             <ul class="right-side-menu">
                                 <li class="right-side">
-                                    
+
                                 </li>
                                 <li class="right-side onhover-dropdown">
                                     <div class="delivery-login-box">

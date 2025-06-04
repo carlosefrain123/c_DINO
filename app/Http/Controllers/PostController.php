@@ -77,4 +77,14 @@ class PostController extends Controller
 
         return view('blog.index', compact('allPosts', 'categories', 'latestPosts', 'tags', 'category', 'tag', 'search'));
     }
+    public function list()
+    {
+        $allPosts = Post::with(['user', 'categories'])->latest('published_at')->paginate(10); // Puedes ajustar cantidad
+
+        $categories = Category::with('posts')->get();
+        $tags = Tag::all();
+        $latestPosts = Post::latest('published_at')->take(4)->get();
+
+        return view('blog.list', compact('allPosts', 'categories', 'tags', 'latestPosts'));
+    }
 }

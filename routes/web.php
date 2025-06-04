@@ -10,6 +10,9 @@ Route::get('/', [PostController::class, 'index'])->name('home');
 // 📰 Blog completo (todos los posts)
 Route::get('/blogs', [PostController::class, 'blog'])->name('blog.index');
 
+// 📃 Blog en vista tipo lista
+Route::get('/blogs/list', [PostController::class, 'list'])->name('blog.list'); // 👈 AQUI VA
+
 // 📁 Filtrar por categoría
 Route::get('/blogs/category/{slug}', [PostController::class, 'blog'])->name('posts.category');
 
