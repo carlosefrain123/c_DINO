@@ -1,59 +1,5 @@
 <footer class="section-t-space footer-section-2">
     <div class="container-fluid-lg">
-
-        <!-- Sección de servicios destacados -->
-        <div class="service-section">
-            <div class="row g-3">
-                <div class="col-12">
-                    <div class="service-contain">
-                        <!-- Producto siempre fresco -->
-                        <div class="service-box">
-                            <div class="service-image">
-                                <img src="{{ asset('assets/svg/product.svg') }}" class="blur-up lazyload"
-                                    alt="Productos frescos">
-                            </div>
-                            <div class="service-detail">
-                                <h5>Productos Siempre Frescos</h5>
-                            </div>
-                        </div>
-
-                        <!-- Envío gratuito -->
-                        <div class="service-box">
-                            <div class="service-image">
-                                <img src="{{ asset('assets/svg/delivery.svg') }}" class="blur-up lazyload"
-                                    alt="Envío gratis">
-                            </div>
-                            <div class="service-detail">
-                                <h5>Envío Gratis en Compras Mayores a S/ 200</h5>
-                            </div>
-                        </div>
-
-                        <!-- Descuentos diarios -->
-                        <div class="service-box">
-                            <div class="service-image">
-                                <img src="{{ asset('assets/svg/discount.svg') }}" class="blur-up lazyload"
-                                    alt="Descuentos diarios">
-                            </div>
-                            <div class="service-detail">
-                                <h5>Descuentos Especiales Todos los Días</h5>
-                            </div>
-                        </div>
-
-                        <!-- Mejor precio del mercado -->
-                        <div class="service-box">
-                            <div class="service-image">
-                                <img src="{{ asset('assets/svg/market.svg') }}" class="blur-up lazyload"
-                                    alt="Mejor precio">
-                            </div>
-                            <div class="service-detail">
-                                <h5>El Mejor Precio del Mercado</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Información principal del footer -->
         <div class="main-footer">
             <div class="row g-md-4 gy-sm-5 gy-2">
