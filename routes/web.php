@@ -13,6 +13,9 @@ Route::get('/blogs', [PostController::class, 'blog'])->name('blog.index');
 // 📃 Blog en vista tipo lista
 Route::get('/blogs/list', [PostController::class, 'list'])->name('blog.list'); // 👈 AQUI VA
 
+// 📢 Blog solo de avisos
+Route::get('/blogs/notice', [PostController::class, 'notice'])->name('blog.notice'); // 👈 AQUI AGREGA ESTA LÍNEA
+
 // 📁 Filtrar por categoría
 Route::get('/blogs/category/{slug}', [PostController::class, 'blog'])->name('posts.category');
 

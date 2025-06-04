@@ -161,6 +161,13 @@
                                                     Eventos
                                                 </a>
                                             </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link ps-xl-2 ps-0 no-icon {{ Route::is('posts.category') && request()->slug == 'notice' ? 'active' : '' }}"
+                                                    href="{{ route('posts.category', ['slug' => 'notice']) }}">
+                                                    Noticias
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>

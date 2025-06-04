@@ -87,4 +87,21 @@ class PostController extends Controller
 
         return view('blog.list', compact('allPosts', 'categories', 'tags', 'latestPosts'));
     }
+    public function notice()
+    {
+        $category = Category::where('slug', 'notice')->firstOrFail();
+
+        $allPosts = Post::with(['user', 'categories'])
+            ->whereHas('categories', function ($query) use ($category) {
+                $query->where('categories.id', $category->id);
+            })
+            ->latest('published_at')
+            ->paginate(6); // ajusta la cantidad si deseas
+
+        $categories = Category::with('posts')->get();
+        $tags = Tag::all();
+        $latestPosts = Post::latest('published_at')->take(4)->get();
+
+        return view('blog.notice-item', compact('allPosts', 'categories', 'tags', 'latestPosts'));
+    }
 }
