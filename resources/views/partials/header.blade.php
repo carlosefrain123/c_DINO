@@ -155,6 +155,12 @@
                                                 </a>
                                             </li>
 
+                                            <li class="nav-item">
+                                                <a class="nav-link ps-xl-2 ps-0 no-icon {{ Route::is('posts.category') && request()->slug == 'event' ? 'active' : '' }}"
+                                                    href="{{ route('posts.category', ['slug' => 'event']) }}">
+                                                    Eventos
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
