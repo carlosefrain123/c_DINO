@@ -214,6 +214,6 @@ class PostController extends Controller
 
         $post->delete();
 
-        return redirect()->route('posts.list')->with('success', '¡Post eliminado exitosamente!');
+        return redirect()->route('posts.userPosts')->with('success', '¡Post eliminado exitosamente!');
     }
 }
