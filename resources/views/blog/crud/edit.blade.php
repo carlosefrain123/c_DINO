@@ -24,7 +24,7 @@
                         @endif
 
                         {{-- Formulario --}}
-                        <form action="{{ route('posts.update', $post->id) }}" method="POST">
+                        <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 
@@ -65,6 +65,17 @@
                                         </div>
                                     @endforeach
                                 </div>
+                            </div>
+
+                            {{-- Imagen destacada --}}
+                            <div class="mb-3">
+                                <label for="featured_image" class="form-label">Imagen destacada</label>
+                                <input type="file" name="featured_image" id="featured_image" class="form-control">
+                                @if ($post->featured_image)
+                                    <p class="mt-2">Imagen actual:</p>
+                                    <img src="{{ asset('storage/' . $post->featured_image) }}" alt="Imagen actual"
+                                        width="200">
+                                @endif
                             </div>
 
                             {{-- Estado --}}
