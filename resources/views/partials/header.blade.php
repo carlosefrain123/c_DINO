@@ -222,7 +222,7 @@
                                                     <a href="{{ route('posts.userPosts') }}">Mis Publicaciones</a>
                                                 </li>
                                                 <li class="product-box-contain">
-                                                    <a href="{{-- {{ route('profile.edit') }} --}}">Perfil</a>
+                                                    <a href="{{ route('dashboard') }}">Perfil</a>
                                                 </li>
                                                 <li class="product-box-contain">
                                                     <a href="#"

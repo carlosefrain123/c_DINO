@@ -16,7 +16,7 @@
                                 <div class="product-tab">
                                     <div class="title d-flex justify-content-between align-items-center">
                                         <h2>Mis Publicaciones</h2>
-                                        <a href="{{ route('posts.create') }}" class="btn btn-primary btn-sm">
+                                        <a href="{{ route('posts.create') }}" class="btn theme-bg-color btn-sm text-white">
                                             Crear Nueva
                                         </a>
                                     </div>

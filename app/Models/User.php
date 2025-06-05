@@ -19,6 +19,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'phone', // ✅ Añade esto
         'email',
         'password',
         'role',
@@ -46,7 +47,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    public function posts(){
+    public function posts()
+    {
         return $this->hasMany(Post::class);
     }
 }

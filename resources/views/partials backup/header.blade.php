@@ -79,55 +79,7 @@
                         <div class="rightside-menu">
                             <div class="option-list">
                                 <ul>
-                                    <!-- Ícono perfil -->
-                                    <li>
-                                        <a href="javascript:void(0)" class="header-icon user-icon search-icon">
-                                            <i class="iconly-Profile icli"></i>
-                                        </a>
-                                    </li>
-
-                                    <!-- Ícono búsqueda -->
-                                    <li>
-                                        <a href="javascript:void(0)" class="header-icon search-box search-icon">
-                                            <i class="iconly-Search icli"></i>
-                                        </a>
-                                    </li>
-
-                                    <!-- Favoritos -->
-                                    <li class="onhover-dropdown">
-                                        <a href="#" class="header-icon swap-icon">
-                                            <small id="wishlist-count" class="badge-number">0</small>
-                                            <i class="iconly-Heart icli"></i>
-                                        </a>
-                                    </li>
-
-                                    <!-- Carrito -->
-                                    <li class="onhover-dropdown">
-                                        <a href="#" class="header-icon bag-icon">
-                                            <small id="cart-count-uno" class="badge-number">0</small>
-                                            <i class="iconly-Bag-2 icli"></i>
-                                        </a>
-                                        <div class="onhover-div">
-                                            <ul class="cart-list" id="cart-dropdown">
-                                                <!-- Productos del carrito se insertan dinámicamente -->
-                                            </ul>
-
-                                            <div class="price-box">
-                                                <h5>Total:</h5>
-                                                <small>+ Envío</small>
-                                                <h4 class="theme-color fw-bold" id="cart-dropdown-total">$ 0.00</h4>
-                                            </div>
-
-                                            <div class="button-group">
-                                                <a href="#" class="btn btn-sm cart-button">Ver Carrito</a>
-                                                <a href="checkout.html"
-                                                    class="btn btn-sm cart-button theme-bg-color text-white">
-                                                    Proceder al Pago
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-
+                                    
                                     <!-- Perfil/Usuario -->
                                     <li class="onhover-dropdown">
                                         <a href="javascript:void(0)" class="header-icon swap-icon">
@@ -149,7 +101,7 @@
                                                 @auth
                                                     <!-- Usuario autenticado -->
                                                     <li class="product-box-contain">
-                                                        <a href="#">Mi Perfil</a>
+                                                        <a href="{{ route('dashboard') }}">Mi Perfil</a>
                                                     </li>
 
                                                     <li class="product-box-contain">
