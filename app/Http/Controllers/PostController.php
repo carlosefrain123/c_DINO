@@ -173,7 +173,8 @@ class PostController extends Controller
             'title' => 'required|string|max:255',
             'summary' => 'required|string|max:500',
             'content' => 'required|string',
-            'category_id' => 'required|exists:categories,id',
+            'categories' => 'required|array|min:1',
+            'categories.*' => 'exists:categories,id',
             'tags' => 'array',
             'tags.*' => 'exists:tags,id',
             'featured_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -196,11 +197,12 @@ class PostController extends Controller
             'published_at' => $request->status === 'published' ? now() : null,
         ]);
 
-        $post->categories()->sync([$request->category_id]);
+        $post->categories()->sync($request->categories);
         $post->tags()->sync($request->tags ?? []);
 
         return redirect()->route('posts.userPosts')->with('success', '¡Post actualizado exitosamente!');
     }
+
 
     public function destroy($id)
     {
