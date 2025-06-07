@@ -15,7 +15,7 @@ class PostController extends Controller
     // 🏠 Página de inicio
     public function index()
     {
-        $latestPosts = Post::with(['user', 'categories'])->latest('published_at')->take(4)->get();
+        $latestPosts = Post::with(['user', 'categories'])->latest('published_at')->take(6)->get();
         $allPosts = Post::with(['user', 'categories'])->latest('published_at')->paginate(5);
 
         return view('welcome', compact('latestPosts', 'allPosts'));
