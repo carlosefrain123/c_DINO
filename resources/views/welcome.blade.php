@@ -28,6 +28,10 @@
     @include('home.why_choose_us')
     <!-- Value Section End -->
 
+        <!-- Value Section Start -->
+    @include('home.ferre_experto')
+    <!-- Value Section End -->
+
     <!-- Newsletter Section Start -->
     @include('home.recent_projects')
     <!-- Newsletter Section End -->

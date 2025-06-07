@@ -2,7 +2,7 @@
 <section class="section-b-space" id="recent_projects">
     <div class="container-fluid-lg">
         <div class="seller-title mb-5 text-center">
-            <h2 class="fw-bold" style="color: #ffd60a">Proyectos Recientes</h2>
+            <h2 class="fw-bold" style="color: #ffd60a">Publicaciones Recientes</h2>
         </div>
 
         <div class="slider-4-blog ratio_50 no-arrow">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             @endforeach
-            
+
         </div>
     </div>
 </section>

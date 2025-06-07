@@ -71,7 +71,7 @@
         <!-- Subfooter -->
         <div class="sub-footer section-small-space">
             <div class="left-footer">
-                <p>&copy; 2025 DINO S.R.L. | Desarrollado por AnderCode</p>
+                <p>&copy; 2025 DINO S.R.L. | Desarrollado por Efrain</p>
             </div>
             <div class="right-footer">
                 <ul class="payment-box">
