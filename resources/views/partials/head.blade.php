@@ -7,7 +7,7 @@
 <meta name="author" content="Andercode">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- Ícono del sitio -->
-<link rel="icon" href="{{ asset('assets/images/favicon/4.png') }}" type="image/x-icon">
+<link rel="icon" href="{{ asset('assets/images/favicon/9.png') }}" type="image/x-icon">
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
