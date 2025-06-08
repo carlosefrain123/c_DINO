@@ -7,9 +7,6 @@
         <div class="container-fluid-lg">
             <div class="row">
                 <div class="col-xxl-12 col-lg-8">
-                    <button class="btn btn-outline-primary btn-md fw-bold d-block mb-4 d-lg-none">
-                        <i data-feather="menu"></i> Mostrar Menú
-                    </button>
                     <div class="dashboard-right-sidebar">
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-product" role="tabpanel">
