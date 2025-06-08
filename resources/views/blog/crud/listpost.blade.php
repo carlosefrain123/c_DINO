@@ -68,8 +68,8 @@
                                                                     </a>
 
                                                                     <form action="{{ route('posts.destroy', $post->id) }}"
-                                                                        method="POST"
-                                                                        onsubmit="return confirm('¿Quieres eliminar esta publicación?');">
+                                                                        method="POST" class="delete-post-form"
+                                                                        data-id="{{ $post->id }}">
                                                                         @csrf
                                                                         @method('DELETE')
                                                                         <button type="submit"
@@ -78,6 +78,7 @@
                                                                             <i data-feather="trash-2"></i>
                                                                         </button>
                                                                     </form>
+
                                                                 </div>
                                                             </td>
 
