@@ -199,10 +199,10 @@
                                             </div>
 
                                             <button class="btn theme-bg-color btn-md fw-bold mt-2 text-white"
-                                                type="submit"
-                                                onclick="return confirm('¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.')">
+                                                type="submit" id="deleteAccountBtn">
                                                 Eliminar mi cuenta
                                             </button>
+
                                         </form>
                                     </div>
                                 </div>
