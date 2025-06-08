@@ -41,8 +41,18 @@ class PostController extends Controller
             abort(404);
         }
 
-        $latestPosts = Post::latest('published_at')->take(4)->get();
-        $categories = Category::with('posts')->get();
+        $latestPosts = Post::whereDoesntHave('categories', function ($q) {
+            $q->where('slug', 'banner');
+        })
+            ->latest('published_at')
+            ->take(4)
+            ->get();
+
+        $categories = Category::withCount('posts')
+            ->where('slug', '!=', 'banner')
+            ->orderByDesc('posts_count')
+            ->get();
+
         $tags = Tag::all();
 
         return view('blog.view', compact('post', 'latestPosts', 'categories', 'tags'));
@@ -79,9 +89,19 @@ class PostController extends Controller
 
         $allPosts = $query->paginate(6);
 
-        $categories = Category::with('posts')->get();
+        $categories = Category::withCount('posts')
+            ->where('slug', '!=', 'banner')
+            ->orderByDesc('posts_count')
+            ->get();
+
         $tags = Tag::all();
-        $latestPosts = Post::latest('published_at')->take(4)->get();
+
+        $latestPosts = Post::whereDoesntHave('categories', function ($q) {
+            $q->where('slug', 'banner');
+        })
+            ->latest('published_at')
+            ->take(4)
+            ->get();
 
         return view('blog.index', compact('allPosts', 'categories', 'latestPosts', 'tags', 'category', 'tag', 'search'));
     }
@@ -90,9 +110,18 @@ class PostController extends Controller
     public function list()
     {
         $allPosts = Post::with(['user', 'categories'])->latest('published_at')->paginate(10);
-        $categories = Category::with('posts')->get();
+        $categories = Category::withCount('posts')
+            ->where('slug', '!=', 'banner')
+            ->orderByDesc('posts_count')
+            ->get();
         $tags = Tag::all();
-        $latestPosts = Post::latest('published_at')->take(4)->get();
+
+        $latestPosts = Post::whereDoesntHave('categories', function ($q) {
+            $q->where('slug', 'banner');
+        })
+            ->latest('published_at')
+            ->take(4)
+            ->get();
 
         return view('blog.list', compact('allPosts', 'categories', 'tags', 'latestPosts'));
     }
@@ -107,9 +136,19 @@ class PostController extends Controller
             ->latest('published_at')
             ->paginate(6);
 
-        $categories = Category::with('posts')->get();
+        $categories = Category::withCount('posts')
+            ->where('slug', '!=', 'banner')
+            ->orderByDesc('posts_count')
+            ->get();
+
         $tags = Tag::all();
-        $latestPosts = Post::latest('published_at')->take(4)->get();
+        
+        $latestPosts = Post::whereDoesntHave('categories', function ($q) {
+            $q->where('slug', 'banner');
+        })
+            ->latest('published_at')
+            ->take(4)
+            ->get();
 
         return view('blog.notice-item', compact('allPosts', 'categories', 'tags', 'latestPosts'));
     }
