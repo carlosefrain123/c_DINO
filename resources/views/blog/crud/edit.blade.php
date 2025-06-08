@@ -93,7 +93,7 @@
                             {{-- Botones --}}
                             <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
                                 <button type="submit" class="btn btn-primary">
-                                    <i data-feather="check" class="me-1"></i> Actualizar
+                                    <i data-feather="check" class="me-1"></i> Guardar
                                 </button>
 
                                 <a href="{{ route('posts.userPosts') }}" class="btn btn-secondary">
