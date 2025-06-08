@@ -15,11 +15,22 @@ class PostController extends Controller
     // 🏠 Página de inicio
     public function index()
     {
-        $latestPosts = Post::with(['user', 'categories'])->latest('published_at')->take(6)->get();
-        $allPosts = Post::with(['user', 'categories'])->latest('published_at')->paginate(5);
+        // 🏁 Posts solo para carrusel (banners)
+        $latestBanners = Post::whereHas('categories', fn($q) => $q->where('slug', 'banner'))
+            ->with(['user', 'categories'])
+            ->latest('published_at')
+            ->take(6)
+            ->get();
 
-        return view('welcome', compact('latestPosts', 'allPosts'));
+        // 🏗️ Posts para sección de proyectos
+        $allPosts = Post::whereHas('categories', fn($q) => $q->where('slug', 'project'))
+            ->with(['user', 'categories'])
+            ->latest('published_at')
+            ->paginate(5);
+
+        return view('welcome', compact('latestBanners', 'allPosts'));
     }
+
 
     // 📄 Vista individual del post
     public function show($id, $slug)

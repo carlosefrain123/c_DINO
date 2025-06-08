@@ -7,7 +7,6 @@
 
         <div class="slider-4-blog ratio_50 no-arrow">
             @foreach ($allPosts as $post)
-                @if ($post->categories->contains('slug', 'project'))
                     <div> <!-- ← aquí quitamos el col-lg-4 col-md-6 -->
                         <div class="blog-box">
                             <div class="blog-box-image">
@@ -23,7 +22,6 @@
                             </a>
                         </div>
                     </div>
-                @endif
             @endforeach
         </div>
 
