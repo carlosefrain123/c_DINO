@@ -90,12 +90,16 @@
                                 </select>
 
                             </div>
+                            {{-- Botones --}}
+                            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                                <button type="submit" class="btn btn-primary">
+                                    <i data-feather="check" class="me-1"></i> Actualizar
+                                </button>
 
-                            {{-- Botón guardar --}}
-                            <button type="submit" class="btn btn-primary">Actualizar</button>
-
-                            {{-- Botón cancelar --}}
-                            <a href="{{ route('posts.userPosts') }}" class="btn btn-secondary ms-2">Cancelar</a>
+                                <a href="{{ route('posts.userPosts') }}" class="btn btn-secondary">
+                                    <i data-feather="x" class="me-1"></i> Cancelar
+                                </a>
+                            </div>
                         </form>
                     </div>
                 </div>

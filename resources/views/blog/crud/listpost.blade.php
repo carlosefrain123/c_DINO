@@ -7,29 +7,29 @@
         <div class="container-fluid-lg">
             <div class="row">
                 <div class="col-xxl-12 col-lg-8">
-                    <button class="btn left-dashboard-show btn-animation btn-md fw-bold d-block mb-4 d-lg-none">
-                        Mostrar Menú
+                    <button class="btn btn-outline-primary btn-md fw-bold d-block mb-4 d-lg-none">
+                        <i data-feather="menu"></i> Mostrar Menú
                     </button>
                     <div class="dashboard-right-sidebar">
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-product" role="tabpanel">
                                 <div class="product-tab">
-                                    <div class="title d-flex justify-content-between align-items-center">
-                                        <h2>Mis Publicaciones</h2>
-                                        <a href="{{ route('posts.create') }}" class="btn theme-bg-color btn-sm text-white">
-                                            Crear Nueva
+                                    <div class="title d-flex justify-content-between align-items-center mb-3">
+                                        <h2 class="mb-0">Mis Publicaciones</h2>
+                                        <a href="{{ route('posts.create') }}" class="btn btn-success btn-sm">
+                                            <i data-feather="plus-circle" class="me-1"></i> Crear Nueva
                                         </a>
                                     </div>
 
                                     {{-- Mensajes --}}
                                     @if (session('success'))
-                                        <div class="alert alert-success mt-3">{{ session('success') }}</div>
+                                        <div class="alert alert-success">{{ session('success') }}</div>
                                     @endif
 
                                     @if ($posts->count() > 0)
-                                        <div class="table-responsive dashboard-bg-box mt-3">
-                                            <table class="table product-table align-middle">
-                                                <thead>
+                                        <div class="table-responsive dashboard-bg-box">
+                                            <table class="table table-bordered table-striped align-middle">
+                                                <thead class="table-light">
                                                     <tr>
                                                         <th scope="col">#</th>
                                                         <th scope="col">Título</th>
@@ -50,31 +50,44 @@
                                                                         class="badge bg-secondary">{{ $category->name }}</span>
                                                                 @endforeach
                                                             </td>
-                                                            <td>{{ ucfirst($post->status) }}</td>
+                                                            <td>
+                                                                <span
+                                                                    class="badge {{ $post->status === 'publicado' ? 'bg-success' : 'bg-warning text-dark' }}">
+                                                                    {{ ucfirst($post->status) }}
+                                                                </span>
+                                                            </td>
                                                             <td>{{ $post->published_at ? $post->published_at->format('d/m/Y') : '-' }}
                                                             </td>
                                                             <td class="text-center">
-                                                                <a href="{{ route('posts.edit', $post->id) }}"
-                                                                    class="btn btn-sm btn-warning me-2">
-                                                                    <i data-feather="edit"></i>
-                                                                </a>
-                                                                <form action="{{ route('posts.destroy', $post->id) }}"
-                                                                    method="POST" class="d-inline"
-                                                                    onsubmit="return confirm('¿Quieres eliminar esta publicación?');">
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <button type="submit" class="btn btn-sm btn-danger">
-                                                                        <i data-feather="trash-2"></i>
-                                                                    </button>
-                                                                </form>
+                                                                <div
+                                                                    class="d-flex justify-content-center align-items-center gap-2">
+                                                                    <a href="{{ route('posts.edit', $post->id) }}"
+                                                                        class="btn btn-sm btn-outline-primary"
+                                                                        title="Editar">
+                                                                        <i data-feather="edit"></i>
+                                                                    </a>
+
+                                                                    <form action="{{ route('posts.destroy', $post->id) }}"
+                                                                        method="POST"
+                                                                        onsubmit="return confirm('¿Quieres eliminar esta publicación?');">
+                                                                        @csrf
+                                                                        @method('DELETE')
+                                                                        <button type="submit"
+                                                                            class="btn btn-sm btn-outline-danger"
+                                                                            title="Eliminar">
+                                                                            <i data-feather="trash-2"></i>
+                                                                        </button>
+                                                                    </form>
+                                                                </div>
                                                             </td>
+
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
                                             </table>
 
                                             {{-- Paginación Laravel --}}
-                                            <nav class="custom-pagination">
+                                            <nav class="custom-pagination mt-4">
                                                 {{ $posts->links() }}
                                             </nav>
                                         </div>
@@ -90,7 +103,7 @@
         </div>
     </section>
 
-    {{-- Feather icons JS (solo si no está cargado en tu layout) --}}
+    {{-- Feather icons JS --}}
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             if (window.feather) {
