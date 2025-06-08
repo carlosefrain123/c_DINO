@@ -89,7 +89,7 @@
 
                                             {{-- Paginación Laravel --}}
                                             <nav class="custom-pagination mt-4">
-                                                {{ $posts->links() }}
+                                                {{ $posts->links('pagination::bootstrap-5') }}
                                             </nav>
                                         </div>
                                     @else
