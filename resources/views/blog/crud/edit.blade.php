@@ -10,9 +10,31 @@
                     <div class="dashboard-right-sidebar">
                         <div class="title mb-4">
                             <h2>Editar Publicación</h2>
+                            <span class="title-leaf">
+                                <svg class="icon-width bg-gray">
+                                    <use xlink:href="../assets/svg/leaf.svg#leaf"></use>
+                                </svg>
+                            </span>
                         </div>
 
-                        {{-- Mostrar errores de validación --}}
+                        {{-- ✅ Mensajes tipo alerta Bootstrap --}}
+                        @if (session('error'))
+                            <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                                {{ session('error') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                        @endif
+
+                        @if (session('success'))
+                            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                                {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                        @endif
+
+                        {{-- ✅ Mostrar errores de validación --}}
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul class="mb-0">
@@ -23,7 +45,7 @@
                             </div>
                         @endif
 
-                        {{-- Formulario --}}
+                        {{-- ✅ Formulario --}}
                         <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
@@ -33,22 +55,34 @@
                                 <label for="title" class="form-label">Título</label>
                                 <input type="text" name="title" id="title" class="form-control"
                                     value="{{ old('title', $post->title) }}" required>
+                                @error('title')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
+
+                            {{-- Slug oculto (opcional si lo generas con JS o backend) --}}
+                            <input type="hidden" id="slug" name="slug" value="{{ old('slug', $post->slug) }}">
 
                             {{-- Resumen --}}
                             <div class="mb-3">
                                 <label for="summary" class="form-label">Resumen</label>
                                 <input type="text" name="summary" id="summary" class="form-control"
                                     value="{{ old('summary', $post->summary) }}" required>
+                                @error('summary')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
 
                             {{-- Contenido --}}
                             <div class="mb-3">
                                 <label for="content" class="form-label">Contenido</label>
                                 <textarea name="content" id="content" class="form-control" rows="6" required>{{ old('content', $post->content) }}</textarea>
+                                @error('content')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
 
-                            {{-- Categorías (checkbox múltiples) --}}
+                            {{-- Categorías --}}
                             <div class="mb-3">
                                 <label class="form-label">Categorías</label>
                                 <div class="row">
@@ -76,6 +110,9 @@
                                     <img src="{{ asset('storage/' . $post->featured_image) }}" alt="Imagen actual"
                                         width="200">
                                 @endif
+                                @error('featured_image')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
 
                             {{-- Estado --}}
@@ -85,11 +122,14 @@
                                     <option value="draft" {{ old('status', $post->status) == 'draft' ? 'selected' : '' }}>
                                         Borrador</option>
                                     <option value="published"
-                                        {{ old('status', $post->status) == 'published' ? 'selected' : '' }}>Publicado
-                                    </option>
+                                        {{ old('status', $post->status) == 'published' ? 'selected' : '' }}>
+                                        Publicado</option>
                                 </select>
-
+                                @error('status')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
+
                             {{-- Botones --}}
                             <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
                                 <button type="submit" class="btn btn-primary">

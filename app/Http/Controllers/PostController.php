@@ -173,8 +173,17 @@ class PostController extends Controller
 
     public function checkSlug(Request $request)
     {
-        $slug = Str::slug($request->input('title'));
-        $exists = Post::where('slug', $slug)->exists();
+        $title = $request->input('title');
+        $postId = $request->input('post_id'); // útil en edición
+
+        $slug = Str::slug($title);
+
+        $query = Post::where('slug', $slug);
+        if ($postId) {
+            $query->where('id', '!=', $postId);
+        }
+
+        $exists = $query->exists();
 
         return response()->json([
             'exists' => $exists,
@@ -194,6 +203,22 @@ class PostController extends Controller
 
     public function update(Request $request, $id)
     {
+        $post = Post::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
+
+        $slug = Str::slug($request->title);
+
+        // 🧠 Verifica si el nuevo slug ya existe en otro post
+        $slugExists = Post::where('slug', $slug)
+            ->where('id', '!=', $post->id) // excluye el post actual
+            ->exists();
+
+        if ($slugExists) {
+            return redirect()->back()
+                ->withInput()
+                ->with('error', '⚠️ Otro post ya está usando este título. Usa uno diferente.');
+        }
+
+        // ✅ Validaciones
         $request->validate([
             'title' => 'required|string|max:255',
             'summary' => 'required|string|max:500',
@@ -206,28 +231,28 @@ class PostController extends Controller
             'status' => 'required|in:draft,published',
         ]);
 
-        $post = Post::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
-
+        // 📷 Imagen nueva (si existe)
         if ($request->hasFile('featured_image')) {
             $imagePath = $request->file('featured_image')->store('blog', 'public');
             $post->featured_image = $imagePath;
         }
 
+        // ✏️ Actualizar datos
         $post->update([
             'title' => $request->title,
-            'slug' => Str::slug($request->title),
+            'slug' => $slug,
             'summary' => $request->summary,
             'content' => $request->content,
             'status' => $request->status,
             'published_at' => $request->status === 'published' ? now() : null,
         ]);
 
+        // 🔁 Sincronizar categorías y etiquetas
         $post->categories()->sync($request->categories);
         $post->tags()->sync($request->tags ?? []);
 
         return redirect()->route('posts.userPosts')->with('success', '¡Post actualizado exitosamente!');
     }
-
 
     public function destroy($id)
     {
