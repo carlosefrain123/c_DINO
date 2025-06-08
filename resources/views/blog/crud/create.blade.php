@@ -17,6 +17,14 @@
                             </span>
                         </div>
 
+                        {{-- ✅ Mensaje de error tipo alerta Bootstrap --}}
+                        @if (session('error'))
+                            <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                                {{ session('error') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                            </div>
+                        @endif
+
                         <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data"
                             class="theme-form theme-form-2 mega-form">
                             @csrf
@@ -29,6 +37,8 @@
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
+
+                            <input type="hidden" id="slug" name="slug" value="">
 
                             <div class="mb-3">
                                 <label for="summary" class="form-label">Resumen:</label>
@@ -89,7 +99,7 @@
 
                             <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
                                 <button type="submit" class="btn btn-primary">
-                                    <i data-feather="check" class="me-1"></i> Actualizar
+                                    <i data-feather="check" class="me-1"></i> Guardar
                                 </button>
 
                                 <a href="{{ route('posts.userPosts') }}" class="btn btn-secondary">

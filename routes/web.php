@@ -44,6 +44,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');    // formulario de edición
         Route::put('/{id}', [PostController::class, 'update'])->name('posts.update');     // actualizar post
         Route::delete('/{id}', [PostController::class, 'destroy'])->name('posts.destroy'); // eliminar post
+        // ✅ Nueva ruta para validar el slug vía AJAX
+        Route::get('/check-slug', [PostController::class, 'checkSlug'])->name('posts.checkSlug');
     });
 
     // 👤 Listar posts del usuario autenticado (Dashboard posts)

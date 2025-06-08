@@ -123,6 +123,15 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+        // ✅ Generar el slug desde el backend
+        $slug = Str::slug($request->title);
+
+        // 🧠 Validar si el slug ya existe
+        if (Post::where('slug', $slug)->exists()) {
+            return redirect()->back()->withInput()->with('error', '⚠️ Publicación duplicada: el título ya fue usado.');
+        }
+
+        // ✅ Validaciones del formulario
         $request->validate([
             'title' => 'required|string|max:255',
             'summary' => 'required|string|max:500',
@@ -134,15 +143,17 @@ class PostController extends Controller
             'status' => 'required|in:draft,published',
         ]);
 
+        // 📷 Guardar imagen si existe
         $imagePath = null;
         if ($request->hasFile('featured_image')) {
             $imagePath = $request->file('featured_image')->store('blog', 'public');
         }
 
+        // 📥 Crear el post
         $post = Post::create([
             'user_id' => Auth::id(),
             'title' => $request->title,
-            'slug' => Str::slug($request->title),
+            'slug' => $slug,
             'summary' => $request->summary,
             'content' => $request->content,
             'featured_image' => $imagePath,
@@ -150,13 +161,27 @@ class PostController extends Controller
             'published_at' => $request->status === 'published' ? now() : null,
         ]);
 
+        // 📎 Relacionar con categoría y etiquetas
         $post->categories()->attach($request->category_id);
         if ($request->has('tags')) {
             $post->tags()->attach($request->tags);
         }
 
+        // ✅ Redirigir con mensaje de éxito
         return redirect()->route('posts.userPosts')->with('success', '¡Post creado exitosamente!');
     }
+
+    public function checkSlug(Request $request)
+    {
+        $slug = Str::slug($request->input('title'));
+        $exists = Post::where('slug', $slug)->exists();
+
+        return response()->json([
+            'exists' => $exists,
+            'slug' => $slug,
+        ]);
+    }
+
 
     public function edit($id)
     {
