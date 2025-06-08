@@ -57,6 +57,9 @@ class PostController extends Controller
 
         $query = Post::with(['user', 'categories'])->latest('published_at');
 
+        // 🔒 Excluir posts con categoría 'banner'
+        $query->whereDoesntHave('categories', fn($q) => $q->where('slug', 'banner'));
+
         if ($request->routeIs('posts.category') && $slug) {
             $category = Category::where('slug', $slug)->firstOrFail();
             $query->whereHas('categories', fn($q) => $q->where('categories.id', $category->id));
