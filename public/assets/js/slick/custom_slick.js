@@ -1600,7 +1600,7 @@ $(".featured-slider").slick({
 //     // focusOnSelect: true
 // });
 //==================
-//SWEET ALERT: Eliminar información
+//SWEET ALERT: Eliminar Post
 $(document).ready(function () {
     // Feather icons
     if (window.feather) feather.replace();
@@ -1627,4 +1627,30 @@ $(document).ready(function () {
         });
     });
 });
+//SEET ALERT: Eliminar Usuarios
+$(document).ready(function () {
+    // Feather icons
+    if (window.feather) feather.replace();
 
+    // Interceptar formularios de eliminación
+    $(".delete-user-form").on("submit", function (e) {
+        e.preventDefault(); // Prevenir envío
+
+        const form = this;
+
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "Esta acción no se puede deshacer.",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                form.submit();
+            }
+        });
+    });
+});

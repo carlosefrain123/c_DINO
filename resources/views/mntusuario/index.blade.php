@@ -65,8 +65,7 @@
                                                                         @method('DELETE')
                                                                         <button type="submit"
                                                                             class="btn btn-sm btn-outline-danger"
-                                                                            title="Eliminar"
-                                                                            onclick="return confirm('¿Estás seguro de eliminar este usuario?')">
+                                                                            title="Eliminar">
                                                                             <i data-feather="trash-2"></i>
                                                                         </button>
                                                                     </form>
