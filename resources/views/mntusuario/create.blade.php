@@ -21,11 +21,13 @@
                         @if (session('error'))
                             <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
                                 {{ session('error') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Cerrar"></button>
                             </div>
                         @endif
 
-                        <form action="{{ route('usuarios.store') }}" method="POST" class="theme-form theme-form-2 mega-form">
+                        <form action="{{ route('usuarios.store') }}" method="POST"
+                            class="theme-form theme-form-2 mega-form">
                             @csrf
 
                             <div class="mb-3">
@@ -55,12 +57,20 @@
                             </div>
 
                             <div class="mb-3">
+                                <label for="password_confirmation" class="form-label">Confirmar Contraseña:</label>
+                                <input type="password" id="password_confirmation" name="password_confirmation"
+                                    class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
                                 <label for="role" class="form-label">Rol:</label>
                                 <select id="role" name="role" class="form-control" required>
                                     <option value="">Seleccione un rol</option>
-                                    <option value="admin" {{ old('role') === 'admin' ? 'selected' : '' }}>Administrador</option>
+                                    <option value="admin" {{ old('role') === 'admin' ? 'selected' : '' }}>Administrador
+                                    </option>
                                     <option value="editor" {{ old('role') === 'editor' ? 'selected' : '' }}>Editor</option>
-                                    <option value="viewer" {{ old('role') === 'viewer' ? 'selected' : '' }}>Visualizador</option>
+                                    <option value="viewer" {{ old('role') === 'viewer' ? 'selected' : '' }}>Visualizador
+                                    </option>
                                 </select>
                                 @error('role')
                                     <small class="text-danger">{{ $message }}</small>

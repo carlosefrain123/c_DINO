@@ -37,25 +37,28 @@ class UserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('users.index')->with('success', '✅ Usuario creado correctamente');
+        return redirect()->route('usuarios.index')->with('success', '✅ Usuario creado correctamente');
     }
 
     // Mostrar formulario de edición
-    public function edit(User $user)
+    public function edit($id)
     {
+        $user = User::findOrFail($id);
         return view('mntusuario.edit', compact('user'));
     }
 
     // Actualizar usuario existente
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
+        $user = User::findOrFail($id);
+
         $request->validate([
-            'name'     => 'required|string|max:255',
-            'email'    => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+            'name'  => 'required|string|max:255',
+            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
             'password' => 'nullable|string|min:6|confirmed',
         ]);
 
-        $user->name  = $request->name;
+        $user->name = $request->name;
         $user->email = $request->email;
 
         if ($request->filled('password')) {
@@ -64,13 +67,13 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect()->route('users.index')->with('success', '✏️ Usuario actualizado correctamente');
+        return redirect()->route('usuarios.index')->with('success', '✏️ Usuario actualizado correctamente');
     }
 
     // Eliminar usuario
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('users.index')->with('success', '🗑 Usuario eliminado correctamente');
+        return redirect()->route('usuarios.index')->with('success', '🗑 Usuario eliminado correctamente');
     }
 }

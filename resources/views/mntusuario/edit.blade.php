@@ -17,11 +17,12 @@
                             </span>
                         </div>
 
-                        {{-- Mensajes --}}
+                        {{-- ✅ Mensajes tipo alerta Bootstrap --}}
                         @if (session('success'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 {{ session('success') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Cerrar"></button>
                             </div>
                         @endif
 
@@ -32,12 +33,14 @@
                                         <li>{{ $error }}</li>
                                     @endforeach
                                 </ul>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Cerrar"></button>
                             </div>
                         @endif
 
-                        {{-- Formulario --}}
-                        <form action="{{ route('users.update', $user->id) }}" method="POST" class="theme-form theme-form-2 mega-form">
+                        {{-- ✅ Formulario --}}
+                        <form action="{{ route('usuarios.update', $user->id) }}" method="POST">
+                            class="theme-form theme-form-2 mega-form">
                             @csrf
                             @method('PUT')
 
@@ -71,13 +74,20 @@
                                 @enderror
                             </div>
 
+                            {{-- Confirmar contraseña --}}
+                            <div class="mb-3">
+                                <label for="password_confirmation" class="form-label">Confirmar contraseña:</label>
+                                <input type="password" id="password_confirmation" name="password_confirmation"
+                                    class="form-control" placeholder="Repite la nueva contraseña">
+                            </div>
+
                             {{-- Botones --}}
                             <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
                                 <button type="submit" class="btn btn-primary">
                                     <i data-feather="check" class="me-1"></i> Guardar
                                 </button>
 
-                                <a href="{{ route('users.index') }}" class="btn btn-secondary">
+                                <a href="{{ route('usuarios.index') }}" class="btn btn-secondary">
                                     <i data-feather="x" class="me-1"></i> Cancelar
                                 </a>
                             </div>
