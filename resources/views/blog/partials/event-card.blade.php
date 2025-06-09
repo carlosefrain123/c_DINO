@@ -26,10 +26,10 @@
                                                     <i data-feather="clock"></i>
                                                     <span>{{ $post->published_at->format('d M, Y') }}</span>
                                                 </span>
-                                                <span class="super">
+                                               {{--  <span class="super">
                                                     <i data-feather="user"></i>
                                                     <span>{{ $post->user->name }}</span>
-                                                </span>
+                                                </span> --}}
                                             </div>
                                             <a href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}">
                                                 <h3>{{ Str::limit($post->title, 60) }}</h3>
