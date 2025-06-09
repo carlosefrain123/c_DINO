@@ -14,8 +14,8 @@
                                 <div class="blog-box wow fadeInUp">
                                     <div class="blog-image">
                                         <a href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}">
-                                            <img src="{{ asset('storage/' . $post->featured_image) }}" class="bg-img blur-up lazyload"
-                                                alt="">
+                                            <img src="{{ asset('storage/' . $post->featured_image) }}"
+                                                class="bg-img blur-up lazyload" alt="">
                                         </a>
                                     </div>
 
@@ -25,6 +25,7 @@
                                                 <i data-feather="clock"></i>
                                                 <span>{{ $post->published_at->format('d M, Y') }}</span>
                                             </span>
+                                            {{-- Es la central --}}
                                             {{-- <span class="super">
                                                 <i data-feather="user"></i>
                                                 <span>{{ $post->user->name }}</span>
@@ -33,11 +34,21 @@
                                         <a href="{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}">
                                             <h3>{{ Str::limit($post->title, 60) }}</h3>
                                         </a>
-                                        <button
-                                            onclick="location.href='{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}'"
-                                            class="blog-button">
-                                            Read More <i class="fa-solid fa-right-long"></i>
-                                        </button>
+                                        <div class="d-flex gap-2">
+                                            @if (request()->routeIs('posts.category') && request()->slug === 'event')
+                                                <button
+                                                    onclick="showImageModal('{{ asset('storage/' . $post->featured_image) }}')"
+                                                    class="blog-button">
+                                                    Ver imagen <i class="fa-solid fa-image"></i>
+                                                </button>
+                                            @else
+                                                <button
+                                                    onclick="location.href='{{ route('posts.show', ['id' => $post->id, 'slug' => $post->slug]) }}'"
+                                                    class="blog-button">
+                                                    Leer Más <i class="fa-solid fa-right-long"></i>
+                                                </button>
+                                            @endif
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -54,4 +65,19 @@
         </div>
     </section>
     <!-- Blog Section End -->
+    <script>
+        function showImageModal(imageUrl) {
+            Swal.fire({
+                html: `<img src="${imageUrl}" alt="Imagen del post" style="max-width: 100%; height: auto; border-radius: 10px;">`,
+                showConfirmButton: false,
+                showCloseButton: true, // 👈 Esto activa la "X"
+                background: '#fff',
+                width: 'auto',
+                padding: '1rem',
+                customClass: {
+                    popup: 'rounded-4 shadow'
+                }
+            });
+        }
+    </script>
 @endsection

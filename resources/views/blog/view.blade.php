@@ -42,12 +42,12 @@
                         <div class="blog-image-contain">
                             <h2>{{ $post->title }}</h2>
                             <ul class="contain-comment-list">
-                                <li>
+                                {{-- <li>
                                     <div class="user-list">
                                         <i data-feather="user"></i>
                                         <span>{{ $post->user->name }}</span>
                                     </div>
-                                </li>
+                                </li> --}}
                                 <li>
                                     <div class="user-list">
                                         <i data-feather="calendar"></i>
