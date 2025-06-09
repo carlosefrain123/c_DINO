@@ -29,16 +29,19 @@ class UserController extends Controller
             'name'     => 'required|string|max:255',
             'email'    => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'role'     => 'required|in:admin,editor,viewer', // 👈 validar que el rol sea uno permitido
         ]);
 
         User::create([
             'name'     => $request->name,
             'email'    => $request->email,
             'password' => Hash::make($request->password),
+            'role'     => $request->role, // 👈 guardar el rol
         ]);
 
         return redirect()->route('usuarios.index')->with('success', '✅ Usuario creado correctamente');
     }
+
 
     // Mostrar formulario de edición
     public function edit($id)
