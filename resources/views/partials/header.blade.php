@@ -225,6 +225,10 @@
                                                     <a href="{{ route('dashboard') }}">Perfil</a>
                                                 </li>
                                                 <li class="product-box-contain">
+                                                    <a href="{{ route('usuarios.index') }}">Mis Usuarios</a>
+                                                    {{-- Aquí el nuevo link --}}
+                                                </li>
+                                                <li class="product-box-contain">
                                                     <a href="#"
                                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                                         Cerrar sesión
