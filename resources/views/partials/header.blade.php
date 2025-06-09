@@ -224,10 +224,14 @@
                                                 <li class="product-box-contain">
                                                     <a href="{{ route('dashboard') }}">Perfil</a>
                                                 </li>
-                                                <li class="product-box-contain">
-                                                    <a href="{{ route('usuarios.index') }}">Mis Usuarios</a>
-                                                    {{-- Aquí el nuevo link --}}
-                                                </li>
+
+                                                {{-- ✅ Solo visible para administradores --}}
+                                                @if (Auth::user()->role === 'admin')
+                                                    <li class="product-box-contain">
+                                                        <a href="{{ route('usuarios.index') }}">Mis Usuarios</a>
+                                                    </li>
+                                                @endif
+
                                                 <li class="product-box-contain">
                                                     <a href="#"
                                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -240,6 +244,7 @@
                                                 </li>
                                             @endguest
                                         </ul>
+
                                     </div>
                                 </li>
                             </ul>
