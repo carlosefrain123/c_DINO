@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 // 🏠 Página principal con posts
 Route::get('/', [PostController::class, 'index'])->name('home');
@@ -50,6 +51,9 @@ Route::middleware('auth')->group(function () {
 
     // 👤 Listar posts del usuario autenticado (Dashboard posts)
     Route::get('/posts/mis-posts', [PostController::class, 'userPosts'])->name('posts.userPosts');
+
+    // 👨‍💼 CRUD de Usuarios (Admin)
+    Route::resource('usuarios', UserController::class)->except(['show']);
 });
 
 // 🏢 Sección COMPANY
