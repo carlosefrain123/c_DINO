@@ -21,7 +21,8 @@
                         @if (session('error'))
                             <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
                                 {{ session('error') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Cerrar"></button>
                             </div>
                         @endif
 
@@ -50,7 +51,7 @@
 
                             <div class="mb-3">
                                 <label for="content" class="form-label">Contenido:</label>
-                                <textarea id="content" name="content" class="form-control" rows="6" required>{{ old('content') }}</textarea>
+                                <textarea id="content" name="content" class="form-control" rows="6">{{ old('content') }}</textarea>
                                 @error('content')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
@@ -113,4 +114,42 @@
             </div>
         </div>
     </section>
+    {{-- 🔧 CKEditor --}}
+    <script>
+        let editorInstance;
+        document.addEventListener('DOMContentLoaded', function() {
+            ClassicEditor
+                .create(document.querySelector('#content'), {
+                    toolbar: {
+                        items: [
+                            'heading', '|',
+                            'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|',
+                            'blockQuote', 'insertTable', 'undo', 'redo'
+                        ]
+                    },
+                    language: 'es',
+                    table: {
+                        contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells']
+                    }
+                })
+                .then(editor => {
+                    editorInstance = editor;
+                    console.log('Editor listo', editor);
+                })
+                .catch(error => {
+                    console.error('Hubo un error con CKEditor:', error);
+                });
+
+            const form = document.getElementById('postEditForm');
+            form.addEventListener('submit', function(e) {
+                editorInstance.updateSourceElement();
+                const contentValue = document.querySelector('#content').value.trim();
+                if (contentValue.length === 0) {
+                    e.preventDefault();
+                    alert('⚠️ El contenido no puede estar vacío.');
+                    editorInstance.editing.view.focus();
+                }
+            });
+        });
+    </script>
 @endsection

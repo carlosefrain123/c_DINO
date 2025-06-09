@@ -19,3 +19,5 @@
 <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bulk-style.css') }}">
 <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
