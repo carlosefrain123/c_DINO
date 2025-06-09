@@ -40,7 +40,6 @@
 
                         {{-- ✅ Formulario --}}
                         <form action="{{ route('usuarios.update', $user->id) }}" method="POST">
-                            class="theme-form theme-form-2 mega-form">
                             @csrf
                             @method('PUT')
 
