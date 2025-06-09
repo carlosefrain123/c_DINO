@@ -12,8 +12,8 @@ class UserController extends Controller
     // Mostrar todos los usuarios
     public function index()
     {
-        $users = User::all();
-        return view('mntusuario.index', compact('users'));
+        $usuarios = User::orderBy('created_at', 'desc')->paginate(10);
+        return view('mntusuario.index', compact('usuarios'));
     }
 
     // Mostrar formulario de creación
