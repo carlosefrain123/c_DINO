@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -74,9 +75,19 @@ class UserController extends Controller
     }
 
     // Eliminar usuario
-    public function destroy(User $user)
+    public function destroy($id)
     {
+        // Evitar que el usuario se elimine a sí mismo
+        if (Auth::id() == $id) {
+            return redirect()->route('usuarios.index')->with('error', '❌ No puedes eliminar tu propia cuenta.');
+        }
+
+        // Buscar el usuario
+        $user = User::findOrFail($id);
+
+
         $user->delete();
+
         return redirect()->route('usuarios.index')->with('success', '🗑 Usuario eliminado correctamente');
     }
 }
