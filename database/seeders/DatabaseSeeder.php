@@ -19,14 +19,14 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(4)->create();
 
         // Crear 5 categorías
-        $categories = \App\Models\Category::factory(5)->create();
+        $categories = \App\Models\Category::factory(4)->create();
 
         // Crear 5 tags
 
-        $tags = \App\Models\Tag::factory(5)->create();
+        $tags = \App\Models\Tag::factory(2)->create();
 
         // Crear 50 posts
-        $posts = \App\Models\Post::factory(50)->create();
+        $posts = \App\Models\Post::factory(2)->create();
 
         $posts->each(function ($post) use ($categories, $tags) {
             // Asociar 1-3 categorías aleatorias por post
