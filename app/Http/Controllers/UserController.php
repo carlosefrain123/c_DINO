@@ -57,13 +57,15 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 
         $request->validate([
-            'name'  => 'required|string|max:255',
-            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+            'name'     => 'required|string|max:255',
+            'email'    => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
             'password' => 'nullable|string|min:6|confirmed',
+            'role'     => ['required', Rule::in(['admin', 'editor', 'viewer'])], 
         ]);
 
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->role = $request->role;
 
         if ($request->filled('password')) {
             $user->password = Hash::make($request->password);
@@ -73,6 +75,7 @@ class UserController extends Controller
 
         return redirect()->route('usuarios.index')->with('success', '✏️ Usuario actualizado correctamente');
     }
+
 
     // Eliminar usuario
     public function destroy($id)

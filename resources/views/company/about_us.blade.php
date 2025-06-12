@@ -107,18 +107,26 @@
                 <div class="col-xxl-6">
                     <div class="seller-title h-100 d-flex">
                         <div class="mt-0 mt-xl-5">
-                            <h2>Fundador: Ing. Marco A. Díaz Carranza</h2>
+                            <h2>Historia de DINO</h2>
                             <p class="text-content">
-                                Con más de 15 años de experiencia en gestión industrial y comercial, el Ing. Marco Díaz
-                                fundó DINO S.R.L. con una visión clara: brindar soluciones eficientes, sostenibles y de alta
-                                calidad en el sector construcción. Su liderazgo ha sido clave para posicionar
-                                a la empresa como un proveedor confiable de materiales y servicios vinculados a Cementos
-                                Pacasmayo.
+                                Distribuidora Norte Pacasmayo SRL (DINO) es la empresa líder en la distribución de
+                                materiales para la construcción en el norte y oriente del Perú. DINO Inició sus operaciones
+                                en el año 1995 y ahora cuenta con plantas de producción en 6 ciudades del norte del Perú,
+                                además de la red de distribución minorista más grande del país compuesta por más de 140
+                                clientes, asociados al abasteciendo los principales depósitos de materiales y ferreterías.
+                                DINO ofrece una variedad de productos de marcas reconocidas especializándose en cemento,
+                                pero también en concreto, bloques, adoquines y fierro para la construcción y en servicios de
+                                Pavimentación en Concreto y Encofrados de Aluminio
+                                En este año 2025, Distribuidora Norte Pacasmayo, DINO, plantea cambios en las líneas de
+                                producción de su planta en Chiclayo. Así, la empresa buscara estar alineada con las
+                                exigencias del mercado de concreto premezclado, según informo al Ministerio de Producción
+                                (PRODUCE)
+
                             </p>
-                            <p>
+                            {{-- <p>
                                 Gracias a su enfoque estratégico, DINO S.R.L. ha logrado expandir su cobertura en el norte
                                 del país sin perder su esencia: compromiso, eficiencia y atención cercana.
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
                 </div>

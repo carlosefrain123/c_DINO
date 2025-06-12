@@ -79,6 +79,22 @@
                                 <input type="password" id="password_confirmation" name="password_confirmation"
                                     class="form-control" placeholder="Repite la nueva contraseña">
                             </div>
+                            {{-- Rol --}}
+                            <div class="mb-3">
+                                <label for="role" class="form-label">Rol:</label>
+                                <select id="role" name="role" class="form-select" required>
+                                    <option value="admin" {{ old('role', $user->role) == 'admin' ? 'selected' : '' }}>
+                                        Administrador</option>
+                                    <option value="editor" {{ old('role', $user->role) == 'editor' ? 'selected' : '' }}>
+                                        Editor</option>
+                                    <option value="customer" {{ old('role', $user->role) == 'customer' ? 'selected' : '' }}>
+                                        Visualizador</option>
+                                </select>
+                                @error('role')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+
 
                             {{-- Botones --}}
                             <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
