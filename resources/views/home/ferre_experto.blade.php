@@ -24,23 +24,24 @@
                             <br><br>
                             <br>
                             <br><br>
+                            <br><br>
                             <br>
                             <ul class="social-icon">
                                 <li>
-                                    <a href="https://www.instagram.com/cementospacasmayo/">
+                                    <a target="_blank" href="https://www.instagram.com/cementospacasmayo/">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://www.facebook.com/pacasmayoferrexperto">
+                                    <a target="_blank" href="https://www.facebook.com/construyexperto">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://www.whatsapp.com/">
-                                        <i class="fa-brands fa-whatsapp"></i>
+                                    <a target="_blank" href="https://construyexperto.pe/">
+                                        <i class="fa-brands fa-google"></i>
                                     </a>
                                 </li>
                             </ul>

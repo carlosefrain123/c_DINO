@@ -14,36 +14,6 @@
             <div class="col-lg-4 d-flex flex-column justify-content-between">
                 <div class="h-100 d-flex flex-column justify-content-around">
                     <!-- Servicio 1 -->
-                    <div class="ts-service-box d-flex mb-4">
-                        <div class="ts-service-box-img me-3">
-                            <img src="../assets/images/icon-image/service-icon5.png" alt="Premezclado"
-                                style="width: 60px;">
-                        </div>
-                        <div class="ts-service-box-info">
-                            <h5 class="service-box-title"><b>Concreto Premezclado</b></h5>
-                            <p class="text-muted">
-                                Suministro de concreto listo para uso en obras, con garantía de calidad.<br>
-                                <b>Ventajas:</b> Ahorro de tiempo en obra, mezcla homogénea y controlada, alta
-                                resistencia y durabilidad.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Servicio 2 -->
-                    <div class="ts-service-box d-flex mb-4">
-                        <div class="ts-service-box-img me-3">
-                            <img src="../assets/images/services_icon/ladr_cementos.png" alt="Ladrillos"
-                                style="width: 60px;">
-                        </div>
-                        <div class="ts-service-box-info">
-                            <h5 class="service-box-title"><b>Ladrillos de Cemento</b></h5>
-                            <p class="text-muted">
-                                Resistentes y económicos para estructuras sólidas.<br>
-                                <b>Ventajas:</b> Fácil manejo, excelente resistencia a la humedad y durabilidad
-                                prolongada.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Servicio 3 -->
                     <div class="ts-service-box d-flex">
                         <div class="ts-service-box-img me-3">
                             <img src="../assets/images/services_icon/cemento.png" alt="Cemento Pacasmayo"
@@ -55,6 +25,35 @@
                                 Distribución oficial con atención garantizada.<br>
                                 <b>Ventajas:</b> Producto confiable, calidad certificada y soporte técnico para tus
                                 proyectos.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Servicio 2 -->
+                    <div class="ts-service-box d-flex mb-4">
+                        <div class="ts-service-box-img me-3">
+                            <img src="../assets/images/services_icon/fondo.png" alt="Premezclado"
+                                style="width: 60px;">
+                        </div>
+                        <div class="ts-service-box-info">
+                            <h5 class="service-box-title"><b>Concreto Premezclado</b></h5>
+                            <p class="text-muted">
+                                Suministro de concreto listo para uso en obras, con garantía de calidad.<br>
+                                <b>Ventajas:</b> Ahorro de tiempo en obra, mezcla homogénea y controlada, alta
+                                resistencia y durabilidad.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Servicio 3 -->
+                    <div class="ts-service-box d-flex mb-4">
+                        <div class="ts-service-box-img me-3">
+                            <img src="../assets/images/services_icon/rapimix.png" alt="Rapimix" style="width: 60px;">
+                        </div>
+                        <div class="ts-service-box-info">
+                            <h5 class="service-box-title"><b>Rapimix</b></h5>
+                            <p class="text-muted">
+                                Ideal para reparaciones pequeñas y trabajos rápidos.<br>
+                                <b>Ventajas:</b> Fácil aplicación, secado rápido y excelente adherencia a diferentes
+                                superficies.
                             </p>
                         </div>
                     </div>
@@ -73,14 +72,15 @@
                     <!-- Servicio 4 -->
                     <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img me-3">
-                            <img src="../assets/images/services_icon/rapimix.png" alt="Rapimix" style="width: 60px;">
+                            <img src="../assets/images/services_icon/ladr_cementos.png" alt="Ladrillos"
+                                style="width: 60px;">
                         </div>
                         <div class="ts-service-box-info">
-                            <h5 class="service-box-title"><b>Rapimix</b></h5>
+                            <h5 class="service-box-title"><b>Ladrillos de Cemento</b></h5>
                             <p class="text-muted">
-                                Ideal para reparaciones pequeñas y trabajos rápidos.<br>
-                                <b>Ventajas:</b> Fácil aplicación, secado rápido y excelente adherencia a diferentes
-                                superficies.
+                                Resistentes y económicos para estructuras sólidas.<br>
+                                <b>Ventajas:</b> Fácil manejo, excelente resistencia a la humedad y durabilidad
+                                prolongada.
                             </p>
                         </div>
                     </div>

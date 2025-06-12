@@ -47,8 +47,8 @@
                                                                     {{ ucfirst($usuario->role) }}
                                                                 </span>
                                                             </td>
-                                                            <td>{{ $usuario->created_at->format('d/m/Y') }}</td>
-                                                            <td class="text-center">
+{{--                                                             <td>{{ $usuario->created_at->format('d/m/Y') }}</td>
+ --}}                                                            <td class="text-center">
                                                                 <div
                                                                     class="d-flex justify-content-center align-items-center gap-2">
                                                                     <a href="{{ route('usuarios.edit', $usuario->id) }}"
