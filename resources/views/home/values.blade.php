@@ -9,33 +9,46 @@
             <!-- Misión -->
             <div class="col-xxl-4 col-md-6 mb-4">
                 <div class="business-box text-center p-4 shadow rounded-3 h-100" style="background-color: #ffffff">
-                    <img src="../assets/images/values/mision.png" class="img-fluid mb-3" alt="Misión" style="max-height: 80px;">
+                    <img src="../assets/images/values/mision.png" class="img-fluid mb-3" alt="Misión"
+                        style="max-height: 80px;">
                     <h4 class="fw-semibold"><b>Misión</b></h4>
-                    <p class="text-muted">Brindar soluciones eficientes en el sector construcción a través de productos de calidad y un servicio cercano, contribuyendo activamente al crecimiento económico y social del norte del Perú.</p>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. EMPRESA X S.A.C. busca brindar
+                        soluciones eficientes y sostenibles, comprometida con el desarrollo tecnológico y humano en
+                        todas sus áreas de influencia.
+                    </p>
                 </div>
             </div>
 
             <!-- Visión -->
-            <div class="col-xxl-4 col-md-6 mb-4" >
+            <div class="col-xxl-4 col-md-6 mb-4">
                 <div class="business-box text-center p-4 shadow rounded-3 h-100" style="background-color: #ffffff">
-                    <img src="../assets/images/values/vision.png" class="img-fluid mb-3" alt="Visión" style="max-height: 80px;">
+                    <img src="../assets/images/values/vision.png" class="img-fluid mb-3" alt="Visión"
+                        style="max-height: 80px;">
                     <h4 class="fw-semibold"><b>Visión</b></h4>
-                            <p class="text-muted">Ser reconocidos como la empresa líder en la comercialización de materiales de construcción en el norte peruano, destacando por nuestra responsabilidad, innovación y compromiso con el bienestar de nuestros clientes y comunidades.</p>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aspiramos a ser referentes en el sector
+                        por nuestra capacidad de innovación, calidad de servicio y compromiso con el progreso de
+                        nuestras comunidades.
+                    </p>
                 </div>
             </div>
 
             <!-- Cultura Organizacional -->
-            <div class="col-xxl-4 col-md-12 mb-4" >
+            <div class="col-xxl-4 col-md-12 mb-4">
                 <div class="business-box text-center p-4 shadow rounded-3 h-100" style="background-color: #ffffff">
-                    <img src="../assets/images/values/cultura2.png" class="img-fluid mb-3" alt="Cultura Organizacional" style="max-height: 80px;">
+                    <img src="../assets/images/values/cultura2.png" class="img-fluid mb-3" alt="Cultura Organizacional"
+                        style="max-height: 80px;">
                     <h4 class="fw-semibold"><b>Cultura Organizacional</b></h4>
-                    <p class="text-muted mb-0">Nuestra cultura se basa en principios que nos impulsan día a día:<br>
-                        • Las personas primero<br>
-                        • Somos conscientes e íntegros<br>
-                        • Nuestra esencia es la diversidad<br>
-                        • Experimentamos y aprendemos<br>
-                        • Unidos somos imparables<br>
-                        • Buena onda y garra por lo que hacemos
+                    <p class="text-muted mb-0">
+                        En EMPRESA X S.A.C., creemos que el éxito empieza desde dentro. Nuestra cultura organizacional
+                        se basa en:<br>
+                        • Respeto y empatía en cada acción<br>
+                        • Transparencia en nuestros procesos<br>
+                        • Diversidad como fuente de fortaleza<br>
+                        • Mejora continua y aprendizaje constante<br>
+                        • Trabajo colaborativo y compromiso<br>
+                        • Pasión por lo que hacemos
                     </p>
                 </div>
             </div>

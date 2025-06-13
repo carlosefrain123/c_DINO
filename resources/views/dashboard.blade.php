@@ -38,7 +38,7 @@
                             <div class="profile-contain">
                                 <div class="profile-image">
                                     <div class="position-relative">
-                                        <img src="{{ asset('assets/images/logo/logodino2.png') }}"
+                                        <img src="{{ asset('assets/images/logo/8.png') }}"
                                             class="blur-up lazyload update_img" alt="">
                                     </div>
                                 </div>

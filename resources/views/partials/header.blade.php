@@ -6,9 +6,9 @@
             <div>
                 <div class="timer-notification text-center">
                     <h6>
-                        <strong class="me-1">¡Bienvenido a DINO S.R.L.!</strong>
-                        Nos especializamos en soluciones innovadoras para la construcción en el norte del Perú.
-                        <strong class="ms-1">¡Comprometidos con la calidad!</strong>
+                        <strong class="me-1">¡Bienvenido a nuestra plataforma!</strong>
+                        Nos especializamos en ofrecer soluciones eficientes y confiables para tu negocio.
+                        <strong class="ms-1">¡Comprometidos con la excelencia!</strong>
                     </h6>
                 </div>
             </div>
@@ -16,17 +16,19 @@
             <div>
                 <div class="timer-notification text-center">
                     <h6>
-                        Más que productos, brindamos confianza y experiencia en cada proyecto.
+                        Más que productos, brindamos valor, compromiso y soporte profesional.
                         <a href="{{ route('company.about') }}" class="text-white">Conoce más sobre nosotros</a>
                     </h6>
                 </div>
             </div>
         </div>
+
         <!-- Botón para cerrar la notificación -->
         <button class="btn close-notification">
             <span>Cerrar</span> <i class="fas fa-times"></i>
         </button>
     </div>
+
     <div class="top-nav top-header sticky-header pb-3 pb-xl-2">
         <div class="container-fluid-lg">
             <div class="row">
@@ -42,7 +44,7 @@
 
                         <!-- Logo -->
                         <a href="{{ route('home') }}" class="web-logo nav-logo">
-                            <img src="{{ asset('assets/images/logo/logodino2.png') }}"
+                            <img src="{{ asset('assets/images/logo/8.png') }}"
                                 class="img-fluid blur-up lazyload" alt="Logo DINO">
                         </a>
 
@@ -103,13 +105,13 @@
                                                                     class="fa-solid fa-bolt-lightning"></i></span>
                                                         </a>
                                                         <ul class="sub-menu">
-                                                            <li><a
+                                                            {{-- <li><a
                                                                     href="{{ route('company.directions.cajamarca') }}">Cajamarca</a>
-                                                            </li>
+                                                            </li> --}}
                                                             <li><a
                                                                     href="{{ route('company.directions.chiclayo') }}">Chiclayo</a>
                                                             </li>
-                                                            <li><a
+                                                            {{-- <li><a
                                                                     href="{{ route('company.directions.chimbote') }}">Chimbote</a>
                                                             </li>
                                                             <li><a
@@ -126,7 +128,7 @@
                                                             </li>
                                                             <li><a
                                                                     href="{{ route('company.directions.trujillo') }}">Trujillo</a>
-                                                            </li>
+                                                            </li> --}}
                                                         </ul>
                                                     </li>
                                                 </ul>

@@ -5,62 +5,59 @@
             <div class="row g-md-4 gy-sm-5 gy-2">
                 <!-- Logo y redes -->
                 <div class="col-xxl-3 col-xl-4 col-sm-6">
-                    <a href="{{route('home')}}" class="foot-logo">
-                        <img src="{{ asset('assets/images/logo/logodino2.png') }}" class="img-fluid" alt="Logo DINO S.R.L."
+                    <a href="{{ route('home') }}" class="foot-logo">
+                        <img src="{{ asset('assets/images/logo/8.png') }}" class="img-fluid" alt="Logo Empresa X"
                             style="width: 75px;">
                     </a>
                     <p class="information-text">
-                        DINO S.R.L es una empresa filial del grupo <strong>Cementos Pacasmayo</strong>, dedicada a la
-                        comercialización y distribución de productos especializados para la construcción y servicios
-                        asociados. </p>
+                        EMPRESA X S.A.C. es una organización dedicada a la distribución y comercialización de productos
+                        especializados, brindando soluciones integrales con enfoque en calidad, eficiencia y
+                        sostenibilidad.
+                    </p>
                     <ul class="social-icon">
-                        <li><a href="https://www.facebook.com/dinosrl" target="_blank"><i
-                                    class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a></li>
-                        <li><a href="https://www.twitter.com/dinosrl" target="_blank"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li><a href="https://www.instagram.com/dinosrl" target="_blank"><i
-                                    class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://www.pinterest.com/dinosrl" target="_blank"><i
-                                    class="fab fa-pinterest-p"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
                     </ul>
                 </div>
 
-                <!-- Puedes añadir enlaces útiles aquí -->
+                <!-- Enlaces útiles -->
                 <div class="col-xxl-2 col-xl-4 col-sm-6">
                     <div class="footer-title">
                         <h4>Enlaces Útiles</h4>
                     </div>
                     <ul class="footer-list">
-                        <li><a href="#">Tienda</a></li>
+                        <li><a href="#">Inicio</a></li>
                         <li><a href="#">Nosotros</a></li>
                         <li><a href="#">Contáctanos</a></li>
                         <li><a href="#">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
 
-                <!-- Otra sección informativa -->
+                <!-- Información de contacto -->
                 <div class="col-xxl-3 col-xl-4 col-sm-6">
                     <div class="footer-title">
-                        <h4>Información de la Tienda</h4>
+                        <h4>Contáctanos</h4>
                     </div>
                     <ul class="footer-address footer-contact">
                         <li>
                             <div class="inform-box">
                                 <i data-feather="phone"></i>
-                                <p>Llámanos: +51 987 654 321</p>
+                                <p>Teléfono: +51 900 000 000</p>
                             </div>
                         </li>
                         <li>
                             <div class="inform-box">
                                 <i data-feather="mail"></i>
-                                <p>Email: soporte@dinosrl.com</p>
+                                <p>Email: contacto@empresax.com</p>
                             </div>
                         </li>
                         <li>
                             <div class="inform-box">
                                 <i data-feather="map-pin"></i>
-                                <p>Lambayeque, Perú</p>
+                                <p>Dirección: Lima, Perú</p>
                             </div>
                         </li>
                     </ul>
@@ -71,7 +68,7 @@
         <!-- Subfooter -->
         <div class="sub-footer section-small-space">
             <div class="left-footer">
-                <p>&copy; 2025 DINO S.R.L. | Desarrollado por Efrain</p>
+                <p>&copy; 2025 EMPRESA X S.A.C. | Todos los derechos reservados</p>
             </div>
             <div class="right-footer">
                 <ul class="payment-box">

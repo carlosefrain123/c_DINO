@@ -5,11 +5,12 @@
             <div class="col-xl-5">
                 <div class="faq-contain">
                     <h2>Preguntas Frecuentes</h2>
-                    <p>Resolvemos las dudas más comunes sobre DINO S.R.L., su relación con Cementos Pacasmayo y su
-                        impacto en el sector de la construcción. Si tienes más consultas, puedes escribirnos
-                        directamente desde nuestra <a href="#" class="theme-color" style="text-decoration: none">
+                    <p>Resolvemos las dudas más comunes sobre EMPRESA X S.A.C. y su impacto en el sector donde
+                        opera. Si tienes más consultas, puedes escribirnos directamente desde nuestra
+                        <a href="#" class="theme-color" style="text-decoration: none">
                             página de contacto
-                        </a>.</p>
+                        </a>.
+                    </p>
                 </div>
             </div>
 
@@ -17,40 +18,35 @@
                 <div class="faq-accordion">
                     <div class="accordion" id="accordionExample">
 
-                        <!-- ¿Qué es DINO S.R.L.? -->
+                        <!-- ¿Qué es EMPRESA X S.A.C.? -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    ¿Qué es DINO S.R.L.? <i class="fa-solid fa-angle-down"></i>
+                                    ¿Qué es EMPRESA X S.A.C.? <i class="fa-solid fa-angle-down"></i>
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <p>Distribuidora Norte Pacasmayo, más conocida como DINO S.R.L., es una empresa
-                                        vinculada a Cementos Pacasmayo, especializada en brindar soluciones integrales
-                                        para el rubro de la construcción. Nos enfocamos en ofrecer materiales de
-                                        calidad, logística eficiente y atención personalizada.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. EMPRESA X S.A.C. se dedica a brindar soluciones innovadoras y de calidad en el rubro industrial, garantizando eficiencia, compromiso y sostenibilidad en cada uno de sus procesos.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Relación con Cementos Pacasmayo -->
+                        <!-- Relación con otras compañías -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    ¿Cuál es la relación entre DINO S.R.L. y Cementos Pacasmayo? <i
+                                    ¿EMPRESA X S.A.C. pertenece a algún grupo empresarial? <i
                                         class="fa-solid fa-angle-down"></i>
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <p>DINO S.R.L. forma parte de la red de distribución de Cementos Pacasmayo. Actuamos
-                                        como aliados estratégicos en la comercialización y entrega de cemento, concreto
-                                        y otros materiales esenciales para la construcción en el norte del Perú.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. EMPRESA X S.A.C. forma parte de un consorcio empresarial que lidera el mercado nacional en innovación tecnológica y servicios especializados.</p>
                                 </div>
                             </div>
                         </div>
@@ -66,54 +62,49 @@
                             <div id="collapseThree" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <p>Contamos con oficinas y centros de distribución en diversas ciudades del norte
-                                        del Perú: Chimbote, Trujillo, Chiclayo, Piura, Cajamarca, Rioja, Bagua,
-                                        Yurimaguas, Moyobamba y Tarapoto. Esto nos permite operar eficientemente en toda
-                                        la región.</p>
+                                    <p>Lorem ipsum dolor sit amet. Nuestras oficinas principales se ubican en Lima, con sedes operativas en Arequipa, Trujillo, Cusco y Piura, lo que nos permite brindar cobertura nacional eficiente.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Productos que vende DINO S.R.L. -->
+                        <!-- Productos o servicios -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    ¿Qué productos vende DINO S.R.L.? <i class="fa-solid fa-angle-down"></i>
+                                    ¿Qué productos o servicios ofrece EMPRESA X S.A.C.? <i class="fa-solid fa-angle-down"></i>
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <p>Los productos que ofrece DINO S.R.L. son:<br>
-                                        - Concreto premezclado,<br>
-                                        - Ladrillos de cemento,<br>
-                                        - Cemento Pacasmayo,<br>
-                                        - Rapimix,<br>
-                                        - Sistemas de viguetas y bovedillas,<br>
-                                        - Bloques de concreto.</p>
+                                    <p>Nuestros servicios incluyen:<br>
+                                        - Consultoría especializada,<br>
+                                        - Desarrollo de software a medida,<br>
+                                        - Logística y distribución industrial,<br>
+                                        - Mantenimiento y soporte técnico,<br>
+                                        - Provisión de materiales certificados.
+                                    </p>
                                 </div>
                             </div>
                         </div>
+
                         <!-- Postulación laboral -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    ¿Puedo postular para trabajar en DINO S.R.L.? <i class="fa-solid fa-angle-down"></i>
+                                    ¿Puedo postular para trabajar en EMPRESA X S.A.C.? <i class="fa-solid fa-angle-down"></i>
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <p>
-                                        Sí. Estamos en constante búsqueda de talento. Puedes enviarnos tu CV mediante
-                                        nuestro formulario de contacto o revisar próximamente la sección
-                                        <a href="https://ats.rankmi.com/tenants/1060/organizations/pacasmayo"
-                                            class="theme-color" style="text-decoration: none" target="_blank"
-                                            rel="noopener noreferrer">
+                                        Claro que sí. EMPRESA X S.A.C. está en constante búsqueda de profesionales comprometidos. Puedes enviarnos tu CV mediante nuestro formulario de contacto o visitar nuestra futura sección de
+                                        <a href="#" class="theme-color" style="text-decoration: none">
                                             "Trabaja con Nosotros"
-                                        </a>, donde publicaremos nuestras vacantes activas.
+                                        </a>.
                                     </p>
                                 </div>
                             </div>
@@ -124,16 +115,16 @@
                             <h2 class="accordion-header" id="headingSix">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    ¿Cómo puedo convertirme en proveedor de DINO S.R.L.? <i
+                                    ¿Cómo puedo convertirme en proveedor de EMPRESA X S.A.C.? <i
                                         class="fa-solid fa-angle-down"></i>
                                 </button>
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <p>Si deseas formar parte de nuestra red de proveedores, comunícate con nosotros al
-                                        correo <a href="mailto:proveedores@dinosrl.com">proveedores@dinosrl.com</a>.
-                                        Evaluaremos tu propuesta y nos pondremos en contacto contigo a la brevedad.</p>
+                                    <p>Si estás interesado en ser proveedor, puedes contactarnos al correo
+                                        <a href="mailto:proveedores@empresax.com">proveedores@empresax.com</a>. Evaluaremos tu propuesta con atención y nos comunicaremos en caso sea de interés.
+                                    </p>
                                 </div>
                             </div>
                         </div>

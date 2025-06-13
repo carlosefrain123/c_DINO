@@ -18,8 +18,9 @@
                                             <h4>Dirección</h4>
                                         </div>
                                         <div class="contact-detail-contain">
-                                            <p>PARQUE INDUSTRIAL PIMENTEL MZ. E LT. 1 , CHICLAYO LAMBAYEQUE (REFERENCIA AL
-                                                FRENTE DE LA UNIVERSIDAD SAN MARTIN DE PORRES)</p>
+                                            {{-- <p>PARQUE INDUSTRIAL PIMENTEL MZ. E LT. 1 , CHICLAYO LAMBAYEQUE (REFERENCIA AL
+                                                FRENTE DE LA UNIVERSIDAD SAN MARTIN DE PORRES)</p> --}}
+                                                <p>Dirección X</p>
                                         </div>
                                     </div>
                                 </div>
@@ -43,7 +44,7 @@
                                             <h4>Email</h4>
                                         </div>
                                         <div class="contact-detail-contain">
-                                            <p>trujillo@dinosrl.pe</p>
+                                            <p>trujillo@empresax.pe</p>
                                         </div>
                                     </div>
                                 </div>

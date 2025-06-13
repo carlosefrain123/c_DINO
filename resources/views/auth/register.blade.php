@@ -42,7 +42,7 @@
                 <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
                     <div class="log-in-box">
                         <div class="log-in-title">
-                            <h3>Bienvenido a DINO S.R.L.</h3>
+                            <h3>Bienvenido a Empres X S.A.C</h3>
                             <h4>Crea una nueva cuenta</h4>
                         </div>
 

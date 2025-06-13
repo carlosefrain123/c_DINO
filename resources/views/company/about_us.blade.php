@@ -12,8 +12,8 @@
                         <div class="col-6">
                             <div class="fresh-image-2">
                                 <div>
-                                    <img src="{{ asset('assets/images/dino/1.jpg') }}" class="bg-img blur-up lazyload"
-                                        alt="Equipo DINO">
+                                    <img src="{{ asset('assets/images/projects/project1.jpg') }}" class="bg-img blur-up lazyload"
+                                        alt="Equipo de trabajo">
                                 </div>
                             </div>
                         </div>
@@ -21,8 +21,8 @@
                         <div class="col-6">
                             <div class="fresh-image">
                                 <div>
-                                    <img src="{{ asset('assets/images/dino/2.jpg') }}" class="bg-img blur-up lazyload"
-                                        alt="Almacén DINO">
+                                    <img src="{{ asset('assets/images/projects/project2.jpg') }}" class="bg-img blur-up lazyload"
+                                        alt="Centro de operaciones">
                                 </div>
                             </div>
                         </div>
@@ -33,16 +33,15 @@
                     <div class="fresh-contain p-center-left">
                         <div>
                             <div class="review-title">
-                                <h2>Comprometidos con la construcción, la eficiencia y el desarrollo sostenible</h2>
+                                <h2>Comprometidos con el desarrollo sostenible, la eficiencia y la innovación</h2>
                             </div>
 
                             <div class="delivery-list">
                                 <p class="text-content">
-                                    DINO S.R.L. (Distribuidora Norte Pacasmayo) es una empresa con más de una década de
-                                    trayectoria en el rubro de la construcción. Especializada en la distribución de concreto
-                                    premezclado, bloques de concreto, Rapimix, viguetas y bovedillas, ladrillos de cemento y
-                                    Cemento Pacasmayo. Nuestro compromiso se basa en ofrecer productos de calidad, logística
-                                    eficiente y atención personalizada en todo el norte del Perú.
+                                    EMPRESA X S.A.C. es una organización con una sólida trayectoria en el rubro de servicios
+                                    y distribución especializada. Nuestra propuesta de valor combina productos de alta
+                                    calidad, procesos optimizados y una atención personalizada que busca generar confianza y
+                                    satisfacción en nuestros clientes.
                                 </p>
 
                                 <ul class="delivery-box">
@@ -65,7 +64,7 @@
                                                     class="blur-up lazyload" alt="">
                                             </div>
                                             <div class="delivery-detail">
-                                                <h5 class="text">Compromiso con el medio ambiente</h5>
+                                                <h5 class="text">Compromiso ambiental y social</h5>
                                             </div>
                                         </div>
                                     </li>
@@ -77,7 +76,7 @@
                                                     class="blur-up lazyload" alt="">
                                             </div>
                                             <div class="delivery-detail">
-                                                <h5 class="text">Productos certificados y de calidad</h5>
+                                                <h5 class="text">Productos certificados y confiables</h5>
                                             </div>
                                         </div>
                                     </li>
@@ -90,7 +89,7 @@
         </div>
     </section>
 
-    <!-- FUNDADOR -->
+    <!-- FUNDADOR / HISTORIA -->
     <section class="seller-poster-section">
         <div class="container-fluid-lg">
             <div class="row">
@@ -98,7 +97,7 @@
                     <div class="poster-box">
                         <div class="poster-image"
                             style="height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <img src="{{ asset('assets/images/team/team1.jpg') }}" alt="Fundador DINO S.R.L."
+                            <img src="{{ asset('assets/images/projects/project3.jpg') }}" alt="Fundador de la empresa"
                                 style="width: 500px; max-height: 500px; object-fit: cover; border-radius: 10px;">
                         </div>
                     </div>
@@ -107,31 +106,22 @@
                 <div class="col-xxl-6">
                     <div class="seller-title h-100 d-flex">
                         <div class="mt-0 mt-xl-5">
-                            <h2>Historia de DINO</h2>
+                            <h2>Nuestra historia</h2>
                             <p class="text-content">
-                                Distribuidora Norte Pacasmayo SRL (DINO) es la empresa líder en la distribución de
-                                materiales para la construcción en el norte y oriente del Perú. DINO Inició sus operaciones
-                                en el año 1995 y ahora cuenta con plantas de producción en 6 ciudades del norte del Perú,
-                                además de la red de distribución minorista más grande del país compuesta por más de 140
-                                clientes, asociados al abasteciendo los principales depósitos de materiales y ferreterías.
-                                DINO ofrece una variedad de productos de marcas reconocidas especializándose en cemento,
-                                pero también en concreto, bloques, adoquines y fierro para la construcción y en servicios de
-                                Pavimentación en Concreto y Encofrados de Aluminio
-                                En este año 2025, Distribuidora Norte Pacasmayo, DINO, plantea cambios en las líneas de
-                                producción de su planta en Chiclayo. Así, la empresa buscara estar alineada con las
-                                exigencias del mercado de concreto premezclado, según informo al Ministerio de Producción
-                                (PRODUCE)
-
+                                EMPRESA X S.A.C. inició sus operaciones en el año [AÑO DE FUNDACIÓN] con el propósito de
+                                brindar soluciones eficientes y sostenibles en el ámbito de [rubro o industria]. A lo largo
+                                de los años, ha consolidado su presencia a nivel regional, desarrollando una red de atención
+                                ágil y una oferta variada de productos y servicios enfocados en la calidad y la innovación.
                             </p>
-                            {{-- <p>
-                                Gracias a su enfoque estratégico, DINO S.R.L. ha logrado expandir su cobertura en el norte
-                                del país sin perder su esencia: compromiso, eficiencia y atención cercana.
-                            </p> --}}
+                            <p class="text-content">
+                                En la actualidad, seguimos apostando por la modernización de nuestras operaciones y la
+                                expansión de nuestras capacidades productivas, alineándonos con las exigencias del mercado y
+                                los estándares técnicos más rigurosos.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 @endsection
